@@ -53,7 +53,7 @@ dependencies = [
   "pywin32>=306; sys_platform == 'win32'",          # Windows API access
 ]
 description = "A modular file and project management system."
-name = "the_aichemist_codex"
+name = "aichemist_archivum"
 readme = "README.md"
 requires-python = ">=3.13.0"   # ! AI Leave this as is
 version         = "0.0.5"
@@ -94,16 +94,21 @@ dev = [
 
   # --- Documentation ---
   "graphviz>=0.20.1",       # Graph visualization tool (needed by pydot/sphinx)
+  "furo>=2024.8.6",
   "mkdocs-material>=9.5.33", # Docs theme - If using MkDocs
   "mkdocs>=1.6.0",          # Static site generator - If using MkDocs
   "mkdocstrings>=0.25.2",   # Docs from docstrings - If using MkDocs
   "mkdocstrings-python>=1.10.8", # Python handler for mkdocstrings - If using MkDocs
   "Pygments>=2.18.0",       # Syntax highlighting (often used by docs)
-  "sphinx>=6.2.1",          # Documentation generator - If using Sphinx
+  "sphinx>=6.2.1",
+  "sphinx-autobuild",
   "sphinx-autodoc-typehints>=1.22.0", # Type hints in Sphinx docs - If using Sphinx
   "sphinx-copybutton>=0.5.2", # Copy button for code blocks - If using Sphinx
-  "sphinx-rtd-theme>=2.0.0",# ReadTheDocs theme for Sphinx - If using Sphinx
+
   "sphinxcontrib-mermaid>=0.9.2", # Mermaid diagrams in Sphinx - If using Sphinx
+  "sphinx-rtd-theme",
+  "furo",            # or your chosen theme
+  "myst-parser",
 
   # --- Notebooks & Interactive ---
   "ipykernel>=6.29.5",      # Jupyter kernel
@@ -116,16 +121,16 @@ dev = [
 ]
 
 [project.scripts]
-codex       = "the_aichemist_codex.interfaces.cli.cli:cli_app"          # Corrected based on provided structure
-docs-build  = "the_aichemist_codex.scripts.build_docs:main"             # Assuming a build script exists in scripts/
-search-tool = "the_aichemist_codex.interfaces.cli.commands.search:main" # Example, adjust if a dedicated script exists
+archivum       = "aichemist_archivum.interfaces.cli.cli:cli_app"          # Corrected based on provided structure
+docs-build  = "aichemist_archivum.scripts.build_docs:main"             # Assuming a build script exists in scripts/
+search-tool = "aichemist_archivum.interfaces.cli.commands.search:main" # Example, adjust if a dedicated script exists
 
 [build-system]
 build-backend = "uv_build"
 requires      = ["uv-build>=0.6.0,<0.7"]
 
 [tool.setuptools.packages.find]
-include = ["the_aichemist_codex*"]
+include = ["aichemist_archivum*"]
 where   = ["src"]
 
 [tool.pytest.ini_options]
@@ -433,9 +438,4 @@ imports = []
 # Add deptry configuration section
 [tool.deptry]
 # Ignore the DEP003 warning for the project importing itself when installed editable
-ignore_transitive = ["the_aichemist_codex"]
-# We won't ignore DEP002 for dev dependencies yet, let's see if fixing DEP003 helps.
-# If dev dependencies still show up after this, consider adding:
-# ignore_dependencies = ["list", "of", "dev", "deps"]
-# Or ensuring deptry recognizes the [project.optional-dependencies.dev] section.
-# ignore_notebooks = true # Uncomment if you have notebooks and want to ignore imports within them
+ignore_transitive = ["aichemist_archivum"]
