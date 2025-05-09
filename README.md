@@ -1,23 +1,25 @@
-# 🧪 AIchemist Archivum **AIchemist Archivum** is an AI-driven file-management platform that can: * ingest, tag and version any folder tree (code, docs, media) * query content via embeddings, regex or semantic search * surface relationships, tech-stack graphs and code metrics * expose the same workflows through a CLI, a gRPC 2.0 / JSON API, and a desktop GUI (Electron + React + Vite)
+# 🧪 AIchemist Archivum
+
+**AIchemist Archivum** is an AI-driven file-management platform that can: * ingest, tag and version any folder tree (code, docs, media) * query content via embeddings, regex or semantic search * surface relationships, tech-stack graphs and code metrics * expose the same workflows through a CLI, a gRPC 2.0 / JSON API, and a desktop GUI (Electron + React + Vite)
 
 The project follows **Clean Architecture**: `core/` → domain logic | `services/` → workflows | `interfaces/` → delivery (CLI / gRPC / Electron).
 
 --- ## Quick Start (dev) ```bash
-# clone + enter monorepo root
+### clone + enter monorepo root
 git clone https://github.com/savagelysubtle/aichemist-archivum
 cd aichemist-archivum
 
-# install Python deps
+## install Python deps
 cd backend
 poetry install      # or: pip install -e .
 cd ..
 
-# install JS deps
+## install JS deps
 cd electron_app
 npm install
 cd ..
 
-# run backend + GUI together
+## run backend + GUI together
 npm run dev         # see package.json → "dev"``
 
 Port
