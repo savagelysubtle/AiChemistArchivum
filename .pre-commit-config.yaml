@@ -49,9 +49,20 @@ repos:
         exclude: ^docs/
 
 -   repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.11.1
+    rev: v1.11.1  # This revision of mirrors-mypy bundles mypy 1.11.1
     hooks:
     -   id: mypy
-        language: system
-        pass_filenames: false
-        args: ['.']
+        # 'language: system' has been removed.
+        # pre-commit will now use the Mypy version from this hook's isolated environment.
+        pass_filenames: false # Retained: Mypy runs on the whole project context as per your original setup.
+        args: ['.']           # Retained: Mypy analyzes the current directory (project root).
+                              # Mypy will automatically pick up its configuration from [tool.mypy] in pyproject.toml.
+        additional_dependencies: [
+            # These are type stubs listed in your pyproject.toml [project.optional-dependencies.dev]
+            # and are needed for Mypy to check your code correctly.
+            "types-aiofiles>=23.2.0.0",
+            "types-networkx>=3.1.0.0",
+            "types-pywin32>=306.0.0.0"
+            # If you use other libraries that have Mypy plugins (e.g., Pydantic),
+            # and they are in your pyproject.toml, add them here too.
+        ]

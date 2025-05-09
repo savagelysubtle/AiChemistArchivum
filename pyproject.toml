@@ -1,143 +1,144 @@
 [project]
 dependencies = [
   # --- Core & Configuration ---
-  "Kreuzberg>=0.1.0",       # Assuming Kreuzberg is a core framework/library for your app
-  "PyYAML>=6.0.1",          # YAML parsing
-  "loguru>=0.7.2",          # Logging
-  "platformdirs>=4.3.6",    # Finding platform-specific directories
-  "python-dotenv>=1.0.1",   # Loading environment variables
-  "rapidfuzz>=2.15.1",      # Fuzzy string matching
-  "tomli>=2.0.1",           # TOML parsing
+  "Kreuzberg>=0.1.0",     # Assuming Kreuzberg is a core framework/library for your app
+  "PyYAML>=6.0.1",        # YAML parsing
+  "loguru>=0.7.2",        # Logging
+  "platformdirs>=4.3.6",  # Finding platform-specific directories
+  "python-dotenv>=1.0.1", # Loading environment variables
+  "rapidfuzz>=2.15.1",    # Fuzzy string matching
+  "tomli>=2.0.1",         # TOML parsing
 
   # --- File Handling & Formats ---
-  "aiofiles>=24.1.0",       # Async file operations
-  "aiosqlite>=0.21.0",      # Async SQLite interaction
-  "cryptography>=41.0.7",   # Cryptographic operations (potentially for secure files)
-  "defusedxml>=0.7.1",      # Safe XML parsing
-  "ezdxf>=1.0.0",           # DXF (CAD) file handling
-  "py7zr>=0.22.0",          # 7zip archive handling
-  "pypdf>=3.17.1",          # PDF handling
-  "python-docx>=0.8.11",    # DOCX (Word) file handling
-  "python-magic>=0.4.27",   # File type detection (requires libmagic)
-  "rarfile>=4.0",           # RAR archive handling
+  "aiofiles>=24.1.0",     # Async file operations
+  "aiosqlite>=0.21.0",    # Async SQLite interaction
+  "cryptography>=41.0.7", # Cryptographic operations (potentially for secure files)
+  "defusedxml>=0.7.1",    # Safe XML parsing
+  "ezdxf>=1.0.0",         # DXF (CAD) file handling
+  "py7zr>=0.22.0",        # 7zip archive handling
+  "pypdf>=3.17.1",        # PDF handling
+  "python-docx>=0.8.11",  # DOCX (Word) file handling
+  "python-magic>=0.4.27", # File type detection (requires libmagic)
+  "rarfile>=4.0",         # RAR archive handling
 
   # --- AI, NLP & Data ---
-  "faiss-cpu>=1.7.4",       # Vector similarity search (CPU version)
-  "numpy>=1.24.0",          # Numerical computing (often dependency of AI/data libs)
-  "pandas>=2.0.0",          # Data manipulation and analysis
-  "pytesseract>=0.3.10",    # OCR (requires Tesseract install)
-  "scikit-learn>=1.3.0",    # Machine learning tools
+  "faiss-cpu>=1.7.4",             # Vector similarity search (CPU version)
+  "numpy>=1.24.0",                # Numerical computing (often dependency of AI/data libs)
+  "pandas>=2.0.0",                # Data manipulation and analysis
+  "pytesseract>=0.3.10",          # OCR (requires Tesseract install)
+  "scikit-learn>=1.3.0",          # Machine learning tools
   "sentence-transformers>=2.2.2", # Sentence embeddings
-  "tiktoken>=0.5.1",        # Tokenizer for OpenAI models
+  "tiktoken>=0.5.1",              # Tokenizer for OpenAI models
 
   # --- Graph & Visualization ---
-  "matplotlib>=3.7.1",      # Plotting library
-  "networkx>=3.1",          # Graph manipulation
-  "pydot>=1.4.2",           # Interface to Graphviz
+  "matplotlib>=3.7.1", # Plotting library
+  "networkx>=3.1",     # Graph manipulation
+  "pydot>=1.4.2",      # Interface to Graphviz
 
   # --- Web & API ---
-  "aiohttp>=3.8.5",         # Async HTTP client/server
+  "aiohttp>=3.8.5",                 # Async HTTP client/server
+  "grpcio-health-checking>=1.60.0", # gRPC health checking
 
   # --- CLI ---
-  "rich>=13.6.0",           # Rich text and formatting in terminal
-  "typer>=0.9.0",           # Creating CLI applications (depends on Rich)
+  "rich>=13.6.0", # Rich text and formatting in terminal
+  "typer>=0.9.0", # Creating CLI applications (depends on Rich)
 
   # --- Search ---
-  "whoosh>=2.7.4",          # Full-text indexing and search
+  "whoosh>=2.7.4", # Full-text indexing and search
 
   # --- Concurrency & Watch ---
-  "watchdog>=3.0.0",        # Watching file system events
+  "watchdog>=3.0.0", # Watching file system events
 
   # --- Windows Specific ---
   "python-magic-bin>=0.4.14; sys_platform == 'win32'", # Pre-compiled libmagic for Windows
-  "pywin32>=306; sys_platform == 'win32'",          # Windows API access
+  "pywin32>=306; sys_platform == 'win32'",             # Windows API access
 ]
-description = "A modular file and project management system."
+description = "A modular file and project management system. With the eventual gaol of being AI Driven."
 name = "aichemist_archivum"
 readme = "README.md"
-requires-python = ">=3.13.0"   # ! AI Leave this as is
-version         = "0.0.5"
+requires-python = ">=3.13.0" # ! AI Leave this as is
+version = "0.0.6"
 
-# //* This is how to define optional dependencies (including 'dev', 'test', 'docs', etc.)
-[project.optional-dependencies]
-dev = [
-  # --- Core Dev Tools ---
-  "setuptools>=73.0.1",     # Core packaging utility (often needed by other tools)
+  # //* This is how to define optional dependencies (including 'dev', 'test', 'docs', etc.)
+  [project.optional-dependencies]
+  dev = [
+    # --- Core Dev Tools ---
+    "setuptools>=73.0.1", # Core packaging utility (often needed by other tools)
 
-  # --- Testing ---
-  "codecov>=2.1.13",        # Code coverage reporting
-  "pytest>=8.3.4",          # Testing framework
-  "pytest-asyncio>=0.25.3", # Async support for pytest
-  "pytest-benchmark>=4.0.0",# Performance benchmarking fixtures
-  "pytest-cov>=6.0.0",      # Coverage plugin for pytest
-  "pytest-mock>=3.14.0",    # Mocking fixtures for pytest
+    # --- Testing ---
+    "codecov>=2.1.13",         # Code coverage reporting
+    "pytest>=8.3.4",           # Testing framework
+    "pytest-asyncio>=0.25.3",  # Async support for pytest
+    "pytest-benchmark>=4.0.0", # Performance benchmarking fixtures
+    "pytest-cov>=6.0.0",       # Coverage plugin for pytest
+    "pytest-mock>=3.14.0",     # Mocking fixtures for pytest
+    "grpclib>=0.4.7",          # For testing gRPC (in-process server)
 
-  # --- Linting, Formatting & Type Checking ---
-  "mypy>=1.11.1",           # Static type checker
-  "mypy-extensions>=1.0.0", # Extensions for mypy
-  "ruff>=0.11.2",           # Fast linter and formatter
-  "types-aiofiles>=23.2.0.0", # Type hints for aiofiles
-  "types-networkx>=3.1.0.0",# Type hints for networkx
-  "types-pywin32>=306.0.0.0",# Type hints for pywin32
+    # --- Linting, Formatting & Type Checking ---
+    "mypy>=1.11.1",             # Static type checker
+    "mypy-extensions>=1.0.0",   # Extensions for mypy
+    "ruff>=0.11.2",             # Fast linter and formatter
+    "types-aiofiles>=23.2.0.0", # Type hints for aiofiles
+    "types-networkx>=3.1.0.0",  # Type hints for networkx
+    "types-pywin32>=306.0.0.0", # Type hints for pywin32
 
-  # --- Dependency Management & Analysis ---
-  "deptry>=0.23.0",         # Checks for unused/missing dependencies
-  "pydeps>=1.12.17",        # Visualizing dependencies
-  "safety",                 # Checks for known security vulnerabilities
+    # --- Dependency Management & Analysis ---
+    "deptry>=0.23.0",  # Checks for unused/missing dependencies
+    "pydeps>=1.12.17", # Visualizing dependencies
+    "safety",          # Checks for known security vulnerabilities
 
-  # --- Pre-commit Hooks ---
-  "pre-commit>=3.8.0",      # Framework for managing pre-commit hooks (Note: Multiple versions listed, consolidated)
+    # --- Pre-commit Hooks ---
+    "pre-commit>=3.8.0", # Framework for managing pre-commit hooks (Note: Multiple versions listed, consolidated)
 
-  # --- Build & Packaging ---
-  "build>=1.2.1",           # Building packages
-  "twine>=5.1.0",           # Uploading packages to PyPI
+    # --- Build & Packaging ---
+    "build>=1.2.1",       # Building packages
+    "twine>=5.1.0",       # Uploading packages to PyPI
+    "PyInstaller>=6.0.0", # For bundling the application
 
-  # --- Documentation ---
-  "graphviz>=0.20.1",       # Graph visualization tool (needed by pydot/sphinx)
-  "furo>=2024.8.6",
-  "mkdocs-material>=9.5.33", # Docs theme - If using MkDocs
-  "mkdocs>=1.6.0",          # Static site generator - If using MkDocs
-  "mkdocstrings>=0.25.2",   # Docs from docstrings - If using MkDocs
-  "mkdocstrings-python>=1.10.8", # Python handler for mkdocstrings - If using MkDocs
-  "Pygments>=2.18.0",       # Syntax highlighting (often used by docs)
-  "sphinx>=6.2.1",
-  "sphinx-autobuild",
-  "sphinx-autodoc-typehints>=1.22.0", # Type hints in Sphinx docs - If using Sphinx
-  "sphinx-copybutton>=0.5.2", # Copy button for code blocks - If using Sphinx
+    # --- Documentation ---
+    "graphviz>=0.20.1",                 # Graph visualization tool (needed by pydot/sphinx)
+    "furo>=2024.8.6",
+    "mkdocs-material>=9.5.33",          # Docs theme - If using MkDocs
+    "mkdocs>=1.6.0",                    # Static site generator - If using MkDocs
+    "mkdocstrings>=0.25.2",             # Docs from docstrings - If using MkDocs
+    "mkdocstrings-python>=1.10.8",      # Python handler for mkdocstrings - If using MkDocs
+    "Pygments>=2.18.0",
+    "sphinx>=6.2.1",
+    "sphinx-autobuild",
+    "sphinx-autodoc-typehints>=1.22.0", # Type hints in Sphinx docs - If using Sphinx
+    "sphinx-copybutton>=0.5.2",         # Copy button for code blocks - If using Sphinx
 
-  "sphinxcontrib-mermaid>=0.9.2", # Mermaid diagrams in Sphinx - If using Sphinx
-  "sphinx-rtd-theme",
-  "furo",            # or your chosen theme
-  "myst-parser",
+    "sphinxcontrib-mermaid>=0.9.2", # Mermaid diagrams in Sphinx - If using Sphinx
+    "sphinx-rtd-theme",
+    "furo",                         # or your chosen theme
+    "myst-parser",
 
-  # --- Notebooks & Interactive ---
-  "ipykernel>=6.29.5",      # Jupyter kernel
-  "ipython>=8.18.1",        # Enhanced Python interactive shell
-  "nbqa>=1.8.7",            # Quality checks for notebooks
+    # --- Notebooks & Interactive ---
+    "ipykernel>=6.29.5", # Jupyter kernel
+    "ipython>=8.18.1",   # Enhanced Python interactive shell
+    "nbqa>=1.8.7",       # Quality checks for notebooks
 
-  # --- Media Handling (Dev) ---
-  "ffmpeg-python>=0.2.0",   # Python bindings for FFmpeg (if needed for tests/dev tasks)
-  "pymediainfo>=6.0.1",     # Wrapper for MediaInfo (if needed for tests/dev tasks)
-]
+    # --- Media Handling (Dev) ---
+    "ffmpeg-python>=0.2.0", # Python bindings for FFmpeg (if needed for tests/dev tasks)
+    "pymediainfo>=6.0.1",   # Wrapper for MediaInfo (if needed for tests/dev tasks)
+  ]
 
-[project.scripts]
-archivum       = "aichemist_archivum.interfaces.cli.cli:cli_app"          # Corrected based on provided structure
-docs-build  = "aichemist_archivum.scripts.build_docs:main"             # Assuming a build script exists in scripts/
-search-tool = "aichemist_archivum.interfaces.cli.commands.search:main" # Example, adjust if a dedicated script exists
+  [project.scripts]
+  archivum = "aichemist_archivum.interfaces.cli.commands:main"
 
 [build-system]
 build-backend = "uv_build"
-requires      = ["uv-build>=0.6.0,<0.7"]
+requires      = [ "uv-build>=0.6.0,<0.7" ]
 
 [tool.setuptools.packages.find]
-include = ["aichemist_archivum*"]
-where   = ["src"]
+include = [ "aichemist_archivum*" ]
+where   = [ "src" ]
 
 [tool.pytest.ini_options]
 addopts = "--basetemp=./tmp"
 asyncio_default_fixture_loop_scope = "function"
 asyncio_mode = "strict"
-filterwarnings = ["ignore::DeprecationWarning", "ignore::PendingDeprecationWarning"]
+filterwarnings = [ "ignore::DeprecationWarning", "ignore::PendingDeprecationWarning" ]
 markers = [
   "asyncio: mark a test as an asyncio test",
   "metadata: mark a test relating to metadata extraction",
@@ -149,87 +150,31 @@ markers = [
   "integration: Integration tests",
   "slow: Tests that take longer to run",
 ]
-python_classes = ["Test*"]
-python_files = ["test_*.py"]
-python_functions = ["test_*"]
-pythonpath = ["src"]
-testpaths = ["tests"]
+python_classes = [ "Test*" ]
+python_files = [ "test_*.py" ]
+python_functions = [ "test_*" ]
+pythonpath = [ "src" ]
+testpaths = [ "tests" ]
 tmp_path_retention_count = 2
 tmp_path_retention_policy = "failed"
 
-[tool.ruff]
-# Recommendation: Explicitly include 'tests' directory if not covered by src/**/
-include = ["pyproject.toml", "src/**/*.py", "tests/**/*.py", "scripts/**/*.py"]
-
-exclude = [".bzr", ".direnv", ".eggs", ".git", ".git-rewrite", ".hg", ".ipynb_checkpoints", ".mypy_cache", ".nox", ".pants.d", ".pyenv", ".pytest_cache", ".pytype", ".ruff_cache", ".svn", ".tox", ".venv", ".vscode", "__pypackages__", "_build", "buck-out", "build", "dist", "node_modules", "site-packages", "venv"]
-
-# Same as Black.
-indent-width   = 4
-line-length    = 88
-target-version = "py313" # Match requires-python
-
-  [tool.ruff.lint]
-  dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
-  fixable            = ["ALL"]
-  # Recommendation: Add more checks gradually (e.g., D for docstrings, SIM for simplification)
-  select = [
-    "E",   # pycodestyle errors
-    "W",   # pycodestyle warnings
-    "F",   # pyflakes
-    "I",   # isort
-    "B",   # flake8-bugbear
-    "C4",  # flake8-comprehensions
-    "UP",  # pyupgrade
-    "N",   # pep8-naming
-    "ANN", # flake8-annotations (Consider ANN001, ANN201 carefully based on project style)
-    "S",   # flake8-bandit (Security)
-    "A",   # flake8-builtins
-    "RUF", # Ruff-specific rules
-  ]
-  unfixable = []
-  # Recommendation: Consider ignoring specific rules if they conflict with project style, e.g.,
-  # ignore = ["ANN101", "ANN102"] # Self/cls type hints can be verbose
-
-    # ADDED per-file-ignores as a separate, non-indented table
-    [tool.ruff.lint.per-file-ignores]
-    "*/__init__.py" = [
-      "F401", # Allow unused imports in __init__ files
-    ]
-    "tests/**/*.py" = [
-      "S101", # Allow asserts in tests
-      "ANN",  # Be less strict with type hints in tests if desired
-      "F821", # Allow undefined names (useful for fixtures)
-      "F823", # Allow potentially undefined names
-    ]
-    "src/the_aichemist_codex/infrastructure/config/manager.py" = ["ANN401" ] # Example: Allow Any in specific legacy/complex files
-    "docs/**/*.py" = [ "E501", ] # Allow long lines in docs
-
-  [tool.ruff.format]
-  docstring-code-format      = true
-  docstring-code-line-length = "dynamic"
-  indent-style               = "space"
-  line-ending                = "auto"
-  quote-style                = "double"
-  skip-magic-trailing-comma  = false
-
-
 [tool.mypy]
 # Remove existing settings and replace with new ones
-python_version = "3.13"
-pretty = true
+pretty           = true
+python_version   = "3.13"
 show_error_codes = true
 
 # --- Strictness ---
-check_untyped_defs = true
+check_untyped_defs       = true
 disallow_incomplete_defs = true
-disallow_untyped_defs = true
+disallow_untyped_defs    = true
 # Consider enabling later: disallow_untyped_decorators = true, disallow_subclassing_any = true
 
 # --- Warnings ---
 warn_redundant_casts = true
-warn_unused_ignores = true
-warn_return_any = true
-warn_unreachable = true
+warn_return_any      = true
+warn_unreachable     = true
+warn_unused_ignores  = true
 # Keep warn_no_return if desired, it was true before, adding it back
 warn_no_return = true
 
@@ -239,30 +184,19 @@ ignore_missing_imports = true
 # --- Path Configuration ---
 # Explicitly check source and tests, exclude docs
 # files = ["src", "tests"] # You can uncomment this if you want to be very explicit
-exclude = ["docs/"] # Exclude the entire docs directory
+exclude = [ "docs/" ] # Exclude the entire docs directory
 
-# Keep the existing overrides for tests
-[[tool.mypy.overrides]]
-module = "tests.*"
-# Relax rules for tests
-check_untyped_defs    = false
-disallow_untyped_defs = false
-disallow_incomplete_defs = false
 
-# Remove the previous docs override as 'exclude' handles it globally
-# [[tool.mypy.overrides]] # This section is removed
-# module                = "docs.*"
-# check_untyped_defs    = false
-# disallow_untyped_defs = false
+  [[tool.mypy.overrides]]
+  check_untyped_defs       = false
+  disallow_incomplete_defs = false
+  disallow_untyped_defs    = false
+  module                   = "tests.*"
+
 
 [tool.pydeps]
-cluster   = true # Group modules from the same package
-max_bacon = 1    # Maximum dependency distance to include
-reverse   = true # Show reverse dependencies
-
-# Exclude standard library modules
+cluster = true # Group modules from the same package
 exclude = [
-  # Standard library
   "re",
   "os",
   "sys",
@@ -289,8 +223,6 @@ exclude = [
   "threading",
   "argparse",
   "traceback",
-
-  # External libraries (common ones that add noise)
   "numpy",
   "pandas",
   "matplotlib",
@@ -301,43 +233,28 @@ exclude = [
   "click",
   "rich",
   "sqlalchemy",
-
-  # Virtual environment paths
   ".venv",
   "site-packages",
   "dist-packages",
-
-  # Test modules/directories
   "test",
   "tests",
   "pytest",
   "mock",
   "conftest",
-
-  # Build/documentation related
   "docs",
   "build",
   "dist",
   "sphinx",
   "setup",
 ]
+max_bacon = 1 # Maximum dependency distance to include
+reverse = true # Show reverse dependencies
 
 # Additional PyDeps options for better visualization
-max_module_depth = 4    # Limit module depth for readability
-min_cluster_size = 2    # Minimum number of nodes to form a cluster
-noise_level      = 1000 # High value to avoid excluding nodes
-format = "png"
-
-[tool.uv]
-# Valid UV-specific configuration options
-required-version = ">=0.6.0"
-# Fix configuration for handling file locking issues on Windows
-cache-dir = "./.uv_cache"
-index-url = "https://pypi.org/simple/"
-
-[tool.uv.workspace]
-members = ["src/the_aichemist_codex/infrastructure"]
-
+format           = "png"
+max_module_depth = 4     # Limit module depth for readability
+min_cluster_size = 2     # Minimum number of nodes to form a cluster
+noise_level      = 1000  # High value to avoid excluding nodes
 
 # Migrated from .markdownlint.json
 [tool.markdownlint]
@@ -355,7 +272,7 @@ default = true
 version = "0.2"
 
 # Language dictionary to use
-dictionaries = ["en_US"]
+dictionaries = [ "en_US" ]
 
 # Files and directories to ignore
 ignore-paths = [
@@ -370,7 +287,7 @@ ignore-paths = [
   "build/",
   "dist/",
   "*.egg-info/",
-  "node_modules/", # Common for web assets if any
+  "node_modules/",  # Common for web assets if any
   "coverage.xml",
   # Add specific files if needed, e.g., lock files if they cause issues
   # "poetry.lock",
@@ -427,15 +344,20 @@ words = [
 ]
 
 # List of words to always ignore (use sparingly)
-ignore-words = []
+ignore-words = [  ]
 
 # You can define custom dictionaries here if needed
-dictionary-definitions = []
+dictionary-definitions = [  ]
 
 # You can import configurations from other files
-imports = []
+imports = [  ]
 
 # Add deptry configuration section
 [tool.deptry]
 # Ignore the DEP003 warning for the project importing itself when installed editable
-ignore_transitive = ["aichemist_archivum"]
+ignore_transitive = [ "aichemist_archivum" ]
+
+[dependency-groups]
+dev = [
+  "pre-commit>=4.2.0",
+]

@@ -1,0 +1,8 @@
+# Valid UV-specific configuration options
+required-version = ">=0.6.0"
+# Fix configuration for handling file locking issues on Windows
+cache-dir = "./.uv_cache"
+index-url = "https://pypi.org/simple/"
+
+[workspace]
+members = [ "src/the_aichemist_codex/infrastructure" ]

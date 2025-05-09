@@ -1,0 +1,101 @@
+indent-width   = 4
+line-length    = 88
+target-version = "py313" # Match requires-python
+
+# Recommendation: Explicitly include 'tests' directory if not covered by src/**/
+include = [
+    "pyproject.toml",
+    "src/**/*.py",
+    "tests/**/*.py",
+    "scripts/**/*.py",
+]
+
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+]
+
+[lint]
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+fixable            = [ "ALL" ]
+# Recommendation: Add more checks gradually (e.g., D for docstrings, SIM for simplification)
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+    "N",   # pep8-naming
+    "ANN", # flake8-annotations (Consider ANN001, ANN201 carefully based on project style)
+    "S",   # flake8-bandit (Security)
+    "A",   # flake8-builtins
+    "RUF", # Ruff-specific rules
+]
+unfixable = [  ]
+# Recommendation: Consider ignoring specific rules if they conflict with project style, e.g.,
+# ignore = ["ANN101", "ANN102"] # Self/cls type hints can be verbose
+ignore = [
+    # Rules that conflict with the formatter as per Ruff's documentation
+    "W191",   # tab-indentation (formatter handles via indent-style)
+    "E111",   # indentation-with-invalid-multiple
+    "E114",   # indentation-with-invalid-multiple-comment
+    "E117",   # over-indented
+    "D206",   # docstring-tab-indentation (formatter handles via indent-style)
+    "D300",   # triple-single-quotes (formatter handles via quote-style)
+    "Q000",   # bad-quotes-inline-string
+    "Q001",   # bad-quotes-multiline-string
+    "Q002",   # bad-quotes-docstring
+    "Q003",   # avoidable-escaped-quote
+    "COM812", # missing-trailing-comma (formatter has its own trailing comma logic)
+    "COM819", # prohibited-trailing-comma (formatter has its own trailing comma logic)
+    "ISC002", # multi-line-implicit-string-concatenation (formatter has its own logic)
+]
+
+    [lint.per-file-ignores]
+    "*/__init__.py" = [
+        "F401", # Allow unused imports in __init__ files
+    ]
+    "docs/**/*.py" = [ "E501" ] # Allow long lines in docs
+    "src/the_aichemist_codex/infrastructure/config/manager.py" = [
+        "ANN401",
+    ] # Example: Allow Any in specific legacy/complex files
+    "tests/**/*.py" = [
+        "S101", # Allow asserts in tests
+        "ANN",  # Be less strict with type hints in tests if desired
+        "F821", # Allow undefined names (useful for fixtures)
+        "F823", # Allow potentially undefined names
+    ]
+
+[format]
+docstring-code-format      = true
+docstring-code-line-length = 88
+indent-style               = "space"
+line-ending                = "auto"
+quote-style                = "double"
+skip-magic-trailing-comma  = false

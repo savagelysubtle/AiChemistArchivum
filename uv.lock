@@ -2,11 +2,174 @@ version = 1
 revision = 1
 requires-python = ">=3.13.0"
 
-[manifest]
-members = [
-    "infrastructure",
-    "the-aichemist-codex",
+[[package]]
+name = "aichemist-archivum"
+version = "0.0.5"
+source = { editable = "." }
+dependencies = [
+    { name = "aiofiles" },
+    { name = "aiohttp" },
+    { name = "aiosqlite" },
+    { name = "cryptography" },
+    { name = "defusedxml" },
+    { name = "ezdxf" },
+    { name = "faiss-cpu" },
+    { name = "kreuzberg" },
+    { name = "loguru" },
+    { name = "matplotlib" },
+    { name = "networkx" },
+    { name = "numpy" },
+    { name = "pandas" },
+    { name = "platformdirs" },
+    { name = "py7zr" },
+    { name = "pydot" },
+    { name = "pypdf" },
+    { name = "pytesseract" },
+    { name = "python-docx" },
+    { name = "python-dotenv" },
+    { name = "python-magic" },
+    { name = "python-magic-bin", marker = "sys_platform == 'win32'" },
+    { name = "pywin32", marker = "sys_platform == 'win32'" },
+    { name = "pyyaml" },
+    { name = "rapidfuzz" },
+    { name = "rarfile" },
+    { name = "rich" },
+    { name = "scikit-learn" },
+    { name = "sentence-transformers" },
+    { name = "tiktoken" },
+    { name = "tomli" },
+    { name = "typer" },
+    { name = "watchdog" },
+    { name = "whoosh" },
 ]
+
+[package.optional-dependencies]
+dev = [
+    { name = "build" },
+    { name = "codecov" },
+    { name = "deptry" },
+    { name = "ffmpeg-python" },
+    { name = "furo" },
+    { name = "graphviz" },
+    { name = "ipykernel" },
+    { name = "ipython" },
+    { name = "mkdocs" },
+    { name = "mkdocs-material" },
+    { name = "mkdocstrings" },
+    { name = "mkdocstrings-python" },
+    { name = "mypy" },
+    { name = "mypy-extensions" },
+    { name = "myst-parser" },
+    { name = "nbqa" },
+    { name = "pre-commit" },
+    { name = "pydeps" },
+    { name = "pygments" },
+    { name = "pymediainfo" },
+    { name = "pytest" },
+    { name = "pytest-asyncio" },
+    { name = "pytest-benchmark" },
+    { name = "pytest-cov" },
+    { name = "pytest-mock" },
+    { name = "ruff" },
+    { name = "safety" },
+    { name = "setuptools" },
+    { name = "sphinx" },
+    { name = "sphinx-autobuild" },
+    { name = "sphinx-autodoc-typehints" },
+    { name = "sphinx-copybutton" },
+    { name = "sphinx-rtd-theme" },
+    { name = "sphinxcontrib-mermaid" },
+    { name = "twine" },
+    { name = "types-aiofiles" },
+    { name = "types-networkx" },
+    { name = "types-pywin32" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "pre-commit" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "aiofiles", specifier = ">=24.1.0" },
+    { name = "aiohttp", specifier = ">=3.8.5" },
+    { name = "aiosqlite", specifier = ">=0.21.0" },
+    { name = "build", marker = "extra == 'dev'", specifier = ">=1.2.1" },
+    { name = "codecov", marker = "extra == 'dev'", specifier = ">=2.1.13" },
+    { name = "cryptography", specifier = ">=41.0.7" },
+    { name = "defusedxml", specifier = ">=0.7.1" },
+    { name = "deptry", marker = "extra == 'dev'", specifier = ">=0.23.0" },
+    { name = "ezdxf", specifier = ">=1.0.0" },
+    { name = "faiss-cpu", specifier = ">=1.7.4" },
+    { name = "ffmpeg-python", marker = "extra == 'dev'", specifier = ">=0.2.0" },
+    { name = "furo", marker = "extra == 'dev'" },
+    { name = "furo", marker = "extra == 'dev'", specifier = ">=2024.8.6" },
+    { name = "graphviz", marker = "extra == 'dev'", specifier = ">=0.20.1" },
+    { name = "ipykernel", marker = "extra == 'dev'", specifier = ">=6.29.5" },
+    { name = "ipython", marker = "extra == 'dev'", specifier = ">=8.18.1" },
+    { name = "kreuzberg", specifier = ">=0.1.0" },
+    { name = "loguru", specifier = ">=0.7.2" },
+    { name = "matplotlib", specifier = ">=3.7.1" },
+    { name = "mkdocs", marker = "extra == 'dev'", specifier = ">=1.6.0" },
+    { name = "mkdocs-material", marker = "extra == 'dev'", specifier = ">=9.5.33" },
+    { name = "mkdocstrings", marker = "extra == 'dev'", specifier = ">=0.25.2" },
+    { name = "mkdocstrings-python", marker = "extra == 'dev'", specifier = ">=1.10.8" },
+    { name = "mypy", marker = "extra == 'dev'", specifier = ">=1.11.1" },
+    { name = "mypy-extensions", marker = "extra == 'dev'", specifier = ">=1.0.0" },
+    { name = "myst-parser", marker = "extra == 'dev'" },
+    { name = "nbqa", marker = "extra == 'dev'", specifier = ">=1.8.7" },
+    { name = "networkx", specifier = ">=3.1" },
+    { name = "numpy", specifier = ">=1.24.0" },
+    { name = "pandas", specifier = ">=2.0.0" },
+    { name = "platformdirs", specifier = ">=4.3.6" },
+    { name = "pre-commit", marker = "extra == 'dev'", specifier = ">=3.8.0" },
+    { name = "py7zr", specifier = ">=0.22.0" },
+    { name = "pydeps", marker = "extra == 'dev'", specifier = ">=1.12.17" },
+    { name = "pydot", specifier = ">=1.4.2" },
+    { name = "pygments", marker = "extra == 'dev'", specifier = ">=2.18.0" },
+    { name = "pymediainfo", marker = "extra == 'dev'", specifier = ">=6.0.1" },
+    { name = "pypdf", specifier = ">=3.17.1" },
+    { name = "pytesseract", specifier = ">=0.3.10" },
+    { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.3.4" },
+    { name = "pytest-asyncio", marker = "extra == 'dev'", specifier = ">=0.25.3" },
+    { name = "pytest-benchmark", marker = "extra == 'dev'", specifier = ">=4.0.0" },
+    { name = "pytest-cov", marker = "extra == 'dev'", specifier = ">=6.0.0" },
+    { name = "pytest-mock", marker = "extra == 'dev'", specifier = ">=3.14.0" },
+    { name = "python-docx", specifier = ">=0.8.11" },
+    { name = "python-dotenv", specifier = ">=1.0.1" },
+    { name = "python-magic", specifier = ">=0.4.27" },
+    { name = "python-magic-bin", marker = "sys_platform == 'win32'", specifier = ">=0.4.14" },
+    { name = "pywin32", marker = "sys_platform == 'win32'", specifier = ">=306" },
+    { name = "pyyaml", specifier = ">=6.0.1" },
+    { name = "rapidfuzz", specifier = ">=2.15.1" },
+    { name = "rarfile", specifier = ">=4.0" },
+    { name = "rich", specifier = ">=13.6.0" },
+    { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.11.2" },
+    { name = "safety", marker = "extra == 'dev'" },
+    { name = "scikit-learn", specifier = ">=1.3.0" },
+    { name = "sentence-transformers", specifier = ">=2.2.2" },
+    { name = "setuptools", marker = "extra == 'dev'", specifier = ">=73.0.1" },
+    { name = "sphinx", marker = "extra == 'dev'", specifier = ">=6.2.1" },
+    { name = "sphinx-autobuild", marker = "extra == 'dev'" },
+    { name = "sphinx-autodoc-typehints", marker = "extra == 'dev'", specifier = ">=1.22.0" },
+    { name = "sphinx-copybutton", marker = "extra == 'dev'", specifier = ">=0.5.2" },
+    { name = "sphinx-rtd-theme", marker = "extra == 'dev'" },
+    { name = "sphinxcontrib-mermaid", marker = "extra == 'dev'", specifier = ">=0.9.2" },
+    { name = "tiktoken", specifier = ">=0.5.1" },
+    { name = "tomli", specifier = ">=2.0.1" },
+    { name = "twine", marker = "extra == 'dev'", specifier = ">=5.1.0" },
+    { name = "typer", specifier = ">=0.9.0" },
+    { name = "types-aiofiles", marker = "extra == 'dev'", specifier = ">=23.2.0.0" },
+    { name = "types-networkx", marker = "extra == 'dev'", specifier = ">=3.1.0.0" },
+    { name = "types-pywin32", marker = "extra == 'dev'", specifier = ">=306.0.0.0" },
+    { name = "watchdog", specifier = ">=3.0.0" },
+    { name = "whoosh", specifier = ">=2.7.4" },
+]
+provides-extras = ["dev"]
+
+[package.metadata.requires-dev]
+dev = [{ name = "pre-commit", specifier = ">=4.2.0" }]
 
 [[package]]
 name = "aiofiles"
@@ -855,34 +1018,6 @@ source = { registry = "https://pypi.org/simple/" }
 sdist = { url = "https://files.pythonhosted.org/packages/dd/8c/3a7ac7e1931bd1bca5f8e3687f7611083f6a79aae02b9cd6b7ce1fb4a8d0/inflate64-1.0.1.tar.gz", hash = "sha256:3b1c83c22651b5942b35829df526e89602e494192bf021e0d7d0b600e76c429d", size = 896103 }
 
 [[package]]
-name = "infrastructure"
-version = "0.1.0"
-source = { virtual = "src/the_aichemist_codex/infrastructure" }
-dependencies = [
-    { name = "aiofiles" },
-    { name = "aiosqlite" },
-    { name = "cryptography" },
-    { name = "platformdirs" },
-    { name = "pyyaml" },
-]
-
-[package.optional-dependencies]
-windows = [
-    { name = "pywin32", marker = "sys_platform == 'win32'" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "aiofiles", specifier = ">=23.2.1" },
-    { name = "aiosqlite", specifier = ">=0.20.0" },
-    { name = "cryptography", specifier = ">=42.0.8" },
-    { name = "platformdirs", specifier = ">=4.2.2" },
-    { name = "pywin32", marker = "sys_platform == 'win32' and extra == 'windows'", specifier = ">=306" },
-    { name = "pyyaml", specifier = ">=6.0.1" },
-]
-provides-extras = ["windows"]
-
-[[package]]
 name = "iniconfig"
 version = "2.1.0"
 source = { registry = "https://pypi.org/simple/" }
@@ -1264,6 +1399,18 @@ wheels = [
 ]
 
 [[package]]
+name = "mdit-py-plugins"
+version = "0.4.2"
+source = { registry = "https://pypi.org/simple/" }
+dependencies = [
+    { name = "markdown-it-py" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/19/03/a2ecab526543b152300717cf232bb4bb8605b6edb946c845016fa9c9c9fd/mdit_py_plugins-0.4.2.tar.gz", hash = "sha256:5f2cd1fdb606ddf152d37ec30e46101a60512bc0e5fa1a7002c36647b09e26b5", size = 43542 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a7/f7/7782a043553ee469c1ff49cfa1cdace2d6bf99a1f333cf38676b3ddf30da/mdit_py_plugins-0.4.2-py3-none-any.whl", hash = "sha256:0c673c3f889399a33b95e88d2f0d111b4447bdfea7f237dab2d488f459835636", size = 55316 },
+]
+
+[[package]]
 name = "mdurl"
 version = "0.1.2"
 source = { registry = "https://pypi.org/simple/" }
@@ -1491,6 +1638,23 @@ source = { registry = "https://pypi.org/simple/" }
 sdist = { url = "https://files.pythonhosted.org/packages/a2/6e/371856a3fb9d31ca8dac321cda606860fa4548858c0cc45d9d1d4ca2628b/mypy_extensions-1.1.0.tar.gz", hash = "sha256:52e68efc3284861e772bbcd66823fde5ae21fd2fdb51c62a211403730b916558", size = 6343 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/79/7b/2c79738432f5c924bef5071f933bcc9efd0473bac3b4aa584a6f7c1c8df8/mypy_extensions-1.1.0-py3-none-any.whl", hash = "sha256:1be4cccdb0f2482337c4743e60421de3a356cd97508abadd57d47403e94f5505", size = 4963 },
+]
+
+[[package]]
+name = "myst-parser"
+version = "4.0.1"
+source = { registry = "https://pypi.org/simple/" }
+dependencies = [
+    { name = "docutils" },
+    { name = "jinja2" },
+    { name = "markdown-it-py" },
+    { name = "mdit-py-plugins" },
+    { name = "pyyaml" },
+    { name = "sphinx" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/66/a5/9626ba4f73555b3735ad86247a8077d4603aa8628537687c839ab08bfe44/myst_parser-4.0.1.tar.gz", hash = "sha256:5cfea715e4f3574138aecbf7d54132296bfd72bb614d31168f48c477a830a7c4", size = 93985 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/5f/df/76d0321c3797b54b60fef9ec3bd6f4cfd124b9e422182156a1dd418722cf/myst_parser-4.0.1-py3-none-any.whl", hash = "sha256:9134e88959ec3b5780aedf8a99680ea242869d012e8821db3126d427edc9c95d", size = 84579 },
 ]
 
 [[package]]
@@ -2895,6 +3059,23 @@ wheels = [
 ]
 
 [[package]]
+name = "sphinx-autobuild"
+version = "2024.10.3"
+source = { registry = "https://pypi.org/simple/" }
+dependencies = [
+    { name = "colorama" },
+    { name = "sphinx" },
+    { name = "starlette" },
+    { name = "uvicorn" },
+    { name = "watchfiles" },
+    { name = "websockets" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/a5/2c/155e1de2c1ba96a72e5dba152c509a8b41e047ee5c2def9e9f0d812f8be7/sphinx_autobuild-2024.10.3.tar.gz", hash = "sha256:248150f8f333e825107b6d4b86113ab28fa51750e5f9ae63b59dc339be951fb1", size = 14023 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/18/c0/eba125db38c84d3c74717008fd3cb5000b68cd7e2cbafd1349c6a38c3d3b/sphinx_autobuild-2024.10.3-py3-none-any.whl", hash = "sha256:158e16c36f9d633e613c9aaf81c19b0fc458ca78b112533b20dafcda430d60fa", size = 11908 },
+]
+
+[[package]]
 name = "sphinx-autodoc-typehints"
 version = "3.2.0"
 source = { registry = "https://pypi.org/simple/" }
@@ -2931,6 +3112,20 @@ wheels = [
 ]
 
 [[package]]
+name = "sphinx-rtd-theme"
+version = "3.0.2"
+source = { registry = "https://pypi.org/simple/" }
+dependencies = [
+    { name = "docutils" },
+    { name = "sphinx" },
+    { name = "sphinxcontrib-jquery" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/91/44/c97faec644d29a5ceddd3020ae2edffa69e7d00054a8c7a6021e82f20335/sphinx_rtd_theme-3.0.2.tar.gz", hash = "sha256:b7457bc25dda723b20b086a670b9953c859eab60a2a03ee8eb2bb23e176e5f85", size = 7620463 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/85/77/46e3bac77b82b4df5bb5b61f2de98637724f246b4966cfc34bc5895d852a/sphinx_rtd_theme-3.0.2-py2.py3-none-any.whl", hash = "sha256:422ccc750c3a3a311de4ae327e82affdaf59eb695ba4936538552f3b00f4ee13", size = 7655561 },
+]
+
+[[package]]
 name = "sphinxcontrib-applehelp"
 version = "2.0.0"
 source = { registry = "https://pypi.org/simple/" }
@@ -2955,6 +3150,18 @@ source = { registry = "https://pypi.org/simple/" }
 sdist = { url = "https://files.pythonhosted.org/packages/43/93/983afd9aa001e5201eab16b5a444ed5b9b0a7a010541e0ddfbbfd0b2470c/sphinxcontrib_htmlhelp-2.1.0.tar.gz", hash = "sha256:c9e2916ace8aad64cc13a0d233ee22317f2b9025b9cf3295249fa985cc7082e9", size = 22617 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/0a/7b/18a8c0bcec9182c05a0b3ec2a776bba4ead82750a55ff798e8d406dae604/sphinxcontrib_htmlhelp-2.1.0-py3-none-any.whl", hash = "sha256:166759820b47002d22914d64a075ce08f4c46818e17cfc9470a9786b759b19f8", size = 98705 },
+]
+
+[[package]]
+name = "sphinxcontrib-jquery"
+version = "4.1"
+source = { registry = "https://pypi.org/simple/" }
+dependencies = [
+    { name = "sphinx" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/de/f3/aa67467e051df70a6330fe7770894b3e4f09436dea6881ae0b4f3d87cad8/sphinxcontrib-jquery-4.1.tar.gz", hash = "sha256:1620739f04e36a2c779f1a131a2dfd49b2fd07351bf1968ced074365933abc7a", size = 122331 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/76/85/749bd22d1a68db7291c89e2ebca53f4306c3f205853cf31e9de279034c3c/sphinxcontrib_jquery-4.1-py2.py3-none-any.whl", hash = "sha256:f936030d7d0147dd026a4f2b5a57343d233f1fc7b363f68b3d4f1cb0993878ae", size = 121104 },
 ]
 
 [[package]]
@@ -3012,6 +3219,18 @@ wheels = [
 ]
 
 [[package]]
+name = "starlette"
+version = "0.46.2"
+source = { registry = "https://pypi.org/simple/" }
+dependencies = [
+    { name = "anyio" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ce/20/08dfcd9c983f6a6f4a1000d934b9e6d626cff8d2eeb77a89a68eef20a2b7/starlette-0.46.2.tar.gz", hash = "sha256:7f7361f34eed179294600af672f565727419830b54b7b084efe44bb82d2fccd5", size = 2580846 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8b/0c/9d30a4ebeb6db2b25a841afbb80f6ef9a854fc3b41be131d249a977b4959/starlette-0.46.2-py3-none-any.whl", hash = "sha256:595633ce89f8ffa71a015caed34a5b2dc1c0cdb3f0f1fbd1e69339cf2abeec35", size = 72037 },
+]
+
+[[package]]
 name = "stdlib-list"
 version = "0.11.1"
 source = { registry = "https://pypi.org/simple/" }
@@ -3049,160 +3268,6 @@ sdist = { url = "https://files.pythonhosted.org/packages/1c/dc/0aff23d6036a4d3bf
 wheels = [
     { url = "https://files.pythonhosted.org/packages/24/99/4772b8e00a136f3e01236de33b0efda31ee7077203ba5967fcc76da94d65/texttable-1.7.0-py2.py3-none-any.whl", hash = "sha256:72227d592c82b3d7f672731ae73e4d1f88cd8e2ef5b075a7a7f01a23a3743917", size = 10768 },
 ]
-
-[[package]]
-name = "the-aichemist-codex"
-version = "0.0.5"
-source = { editable = "." }
-dependencies = [
-    { name = "aiofiles" },
-    { name = "aiohttp" },
-    { name = "aiosqlite" },
-    { name = "cryptography" },
-    { name = "defusedxml" },
-    { name = "ezdxf" },
-    { name = "faiss-cpu" },
-    { name = "kreuzberg" },
-    { name = "loguru" },
-    { name = "matplotlib" },
-    { name = "networkx" },
-    { name = "numpy" },
-    { name = "pandas" },
-    { name = "platformdirs" },
-    { name = "py7zr" },
-    { name = "pydot" },
-    { name = "pypdf" },
-    { name = "pytesseract" },
-    { name = "python-docx" },
-    { name = "python-dotenv" },
-    { name = "python-magic" },
-    { name = "python-magic-bin", marker = "sys_platform == 'win32'" },
-    { name = "pywin32", marker = "sys_platform == 'win32'" },
-    { name = "pyyaml" },
-    { name = "rapidfuzz" },
-    { name = "rarfile" },
-    { name = "rich" },
-    { name = "scikit-learn" },
-    { name = "sentence-transformers" },
-    { name = "tiktoken" },
-    { name = "tomli" },
-    { name = "typer" },
-    { name = "watchdog" },
-    { name = "whoosh" },
-]
-
-[package.optional-dependencies]
-dev = [
-    { name = "build" },
-    { name = "codecov" },
-    { name = "deptry" },
-    { name = "ffmpeg-python" },
-    { name = "furo" },
-    { name = "graphviz" },
-    { name = "ipykernel" },
-    { name = "ipython" },
-    { name = "mkdocs" },
-    { name = "mkdocs-material" },
-    { name = "mkdocstrings" },
-    { name = "mkdocstrings-python" },
-    { name = "mypy" },
-    { name = "mypy-extensions" },
-    { name = "nbqa" },
-    { name = "pre-commit" },
-    { name = "pydeps" },
-    { name = "pygments" },
-    { name = "pymediainfo" },
-    { name = "pytest" },
-    { name = "pytest-asyncio" },
-    { name = "pytest-benchmark" },
-    { name = "pytest-cov" },
-    { name = "pytest-mock" },
-    { name = "ruff" },
-    { name = "safety" },
-    { name = "setuptools" },
-    { name = "sphinx" },
-    { name = "sphinx-autodoc-typehints" },
-    { name = "sphinx-copybutton" },
-    { name = "sphinxcontrib-mermaid" },
-    { name = "twine" },
-    { name = "types-aiofiles" },
-    { name = "types-networkx" },
-    { name = "types-pywin32" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "aiofiles", specifier = ">=24.1.0" },
-    { name = "aiohttp", specifier = ">=3.8.5" },
-    { name = "aiosqlite", specifier = ">=0.21.0" },
-    { name = "build", marker = "extra == 'dev'", specifier = ">=1.2.1" },
-    { name = "codecov", marker = "extra == 'dev'", specifier = ">=2.1.13" },
-    { name = "cryptography", specifier = ">=41.0.7" },
-    { name = "defusedxml", specifier = ">=0.7.1" },
-    { name = "deptry", marker = "extra == 'dev'", specifier = ">=0.23.0" },
-    { name = "ezdxf", specifier = ">=1.0.0" },
-    { name = "faiss-cpu", specifier = ">=1.7.4" },
-    { name = "ffmpeg-python", marker = "extra == 'dev'", specifier = ">=0.2.0" },
-    { name = "furo", marker = "extra == 'dev'", specifier = ">=2024.8.6" },
-    { name = "graphviz", marker = "extra == 'dev'", specifier = ">=0.20.1" },
-    { name = "ipykernel", marker = "extra == 'dev'", specifier = ">=6.29.5" },
-    { name = "ipython", marker = "extra == 'dev'", specifier = ">=8.18.1" },
-    { name = "kreuzberg", specifier = ">=0.1.0" },
-    { name = "loguru", specifier = ">=0.7.2" },
-    { name = "matplotlib", specifier = ">=3.7.1" },
-    { name = "mkdocs", marker = "extra == 'dev'", specifier = ">=1.6.0" },
-    { name = "mkdocs-material", marker = "extra == 'dev'", specifier = ">=9.5.33" },
-    { name = "mkdocstrings", marker = "extra == 'dev'", specifier = ">=0.25.2" },
-    { name = "mkdocstrings-python", marker = "extra == 'dev'", specifier = ">=1.10.8" },
-    { name = "mypy", marker = "extra == 'dev'", specifier = ">=1.11.1" },
-    { name = "mypy-extensions", marker = "extra == 'dev'", specifier = ">=1.0.0" },
-    { name = "nbqa", marker = "extra == 'dev'", specifier = ">=1.8.7" },
-    { name = "networkx", specifier = ">=3.1" },
-    { name = "numpy", specifier = ">=1.24.0" },
-    { name = "pandas", specifier = ">=2.0.0" },
-    { name = "platformdirs", specifier = ">=4.3.6" },
-    { name = "pre-commit", marker = "extra == 'dev'", specifier = ">=3.8.0" },
-    { name = "py7zr", specifier = ">=0.22.0" },
-    { name = "pydeps", marker = "extra == 'dev'", specifier = ">=1.12.17" },
-    { name = "pydot", specifier = ">=1.4.2" },
-    { name = "pygments", marker = "extra == 'dev'", specifier = ">=2.18.0" },
-    { name = "pymediainfo", marker = "extra == 'dev'", specifier = ">=6.0.1" },
-    { name = "pypdf", specifier = ">=3.17.1" },
-    { name = "pytesseract", specifier = ">=0.3.10" },
-    { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.3.4" },
-    { name = "pytest-asyncio", marker = "extra == 'dev'", specifier = ">=0.25.3" },
-    { name = "pytest-benchmark", marker = "extra == 'dev'", specifier = ">=4.0.0" },
-    { name = "pytest-cov", marker = "extra == 'dev'", specifier = ">=6.0.0" },
-    { name = "pytest-mock", marker = "extra == 'dev'", specifier = ">=3.14.0" },
-    { name = "python-docx", specifier = ">=0.8.11" },
-    { name = "python-dotenv", specifier = ">=1.0.1" },
-    { name = "python-magic", specifier = ">=0.4.27" },
-    { name = "python-magic-bin", marker = "sys_platform == 'win32'", specifier = ">=0.4.14" },
-    { name = "pywin32", marker = "sys_platform == 'win32'", specifier = ">=306" },
-    { name = "pyyaml", specifier = ">=6.0.1" },
-    { name = "rapidfuzz", specifier = ">=2.15.1" },
-    { name = "rarfile", specifier = ">=4.0" },
-    { name = "rich", specifier = ">=13.6.0" },
-    { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.11.2" },
-    { name = "safety", marker = "extra == 'dev'" },
-    { name = "scikit-learn", specifier = ">=1.3.0" },
-    { name = "sentence-transformers", specifier = ">=2.2.2" },
-    { name = "setuptools", marker = "extra == 'dev'", specifier = ">=73.0.1" },
-    { name = "sphinx", marker = "extra == 'dev'", specifier = ">=6.2.1" },
-    { name = "sphinx-autodoc-typehints", marker = "extra == 'dev'", specifier = ">=1.22.0" },
-    { name = "sphinx-copybutton", marker = "extra == 'dev'", specifier = ">=0.5.2" },
-    { name = "sphinxcontrib-mermaid", marker = "extra == 'dev'", specifier = ">=0.9.2" },
-    { name = "tiktoken", specifier = ">=0.5.1" },
-    { name = "tomli", specifier = ">=2.0.1" },
-    { name = "twine", marker = "extra == 'dev'", specifier = ">=5.1.0" },
-    { name = "typer", specifier = ">=0.9.0" },
-    { name = "types-aiofiles", marker = "extra == 'dev'", specifier = ">=23.2.0.0" },
-    { name = "types-networkx", marker = "extra == 'dev'", specifier = ">=3.1.0.0" },
-    { name = "types-pywin32", marker = "extra == 'dev'", specifier = ">=306.0.0.0" },
-    { name = "watchdog", specifier = ">=3.0.0" },
-    { name = "whoosh", specifier = ">=2.7.4" },
-]
-provides-extras = ["dev"]
 
 [[package]]
 name = "threadpoolctl"
@@ -3509,6 +3574,19 @@ wheels = [
 ]
 
 [[package]]
+name = "uvicorn"
+version = "0.34.2"
+source = { registry = "https://pypi.org/simple/" }
+dependencies = [
+    { name = "click" },
+    { name = "h11" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/a6/ae/9bbb19b9e1c450cf9ecaef06463e40234d98d95bf572fab11b4f19ae5ded/uvicorn-0.34.2.tar.gz", hash = "sha256:0e929828f6186353a80b58ea719861d2629d766293b6d19baf086ba31d4f3328", size = 76815 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b1/4b/4cef6ce21a2aaca9d852a6e84ef4f135d99fcd74fa75105e2fc0c8308acd/uvicorn-0.34.2-py3-none-any.whl", hash = "sha256:deb49af569084536d269fe0a6d67e3754f104cf03aba7c11c40f01aadf33c403", size = 62483 },
+]
+
+[[package]]
 name = "virtualenv"
 version = "20.30.0"
 source = { registry = "https://pypi.org/simple/" }
@@ -3544,12 +3622,55 @@ wheels = [
 ]
 
 [[package]]
+name = "watchfiles"
+version = "1.0.5"
+source = { registry = "https://pypi.org/simple/" }
+dependencies = [
+    { name = "anyio" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/03/e2/8ed598c42057de7aa5d97c472254af4906ff0a59a66699d426fc9ef795d7/watchfiles-1.0.5.tar.gz", hash = "sha256:b7529b5dcc114679d43827d8c35a07c493ad6f083633d573d81c660abc5979e9", size = 94537 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c7/62/435766874b704f39b2fecd8395a29042db2b5ec4005bd34523415e9bd2e0/watchfiles-1.0.5-cp313-cp313-macosx_10_12_x86_64.whl", hash = "sha256:0b289572c33a0deae62daa57e44a25b99b783e5f7aed81b314232b3d3c81a11d", size = 401531 },
+    { url = "https://files.pythonhosted.org/packages/6e/a6/e52a02c05411b9cb02823e6797ef9bbba0bfaf1bb627da1634d44d8af833/watchfiles-1.0.5-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:a056c2f692d65bf1e99c41045e3bdcaea3cb9e6b5a53dcaf60a5f3bd95fc9763", size = 392417 },
+    { url = "https://files.pythonhosted.org/packages/3f/53/c4af6819770455932144e0109d4854437769672d7ad897e76e8e1673435d/watchfiles-1.0.5-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:b9dca99744991fc9850d18015c4f0438865414e50069670f5f7eee08340d8b40", size = 453423 },
+    { url = "https://files.pythonhosted.org/packages/cb/d1/8e88df58bbbf819b8bc5cfbacd3c79e01b40261cad0fc84d1e1ebd778a07/watchfiles-1.0.5-cp313-cp313-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:894342d61d355446d02cd3988a7326af344143eb33a2fd5d38482a92072d9563", size = 458185 },
+    { url = "https://files.pythonhosted.org/packages/ff/70/fffaa11962dd5429e47e478a18736d4e42bec42404f5ee3b92ef1b87ad60/watchfiles-1.0.5-cp313-cp313-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:ab44e1580924d1ffd7b3938e02716d5ad190441965138b4aa1d1f31ea0877f04", size = 486696 },
+    { url = "https://files.pythonhosted.org/packages/39/db/723c0328e8b3692d53eb273797d9a08be6ffb1d16f1c0ba2bdbdc2a3852c/watchfiles-1.0.5-cp313-cp313-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:d6f9367b132078b2ceb8d066ff6c93a970a18c3029cea37bfd7b2d3dd2e5db8f", size = 522327 },
+    { url = "https://files.pythonhosted.org/packages/cd/05/9fccc43c50c39a76b68343484b9da7b12d42d0859c37c61aec018c967a32/watchfiles-1.0.5-cp313-cp313-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:f2e55a9b162e06e3f862fb61e399fe9f05d908d019d87bf5b496a04ef18a970a", size = 499741 },
+    { url = "https://files.pythonhosted.org/packages/23/14/499e90c37fa518976782b10a18b18db9f55ea73ca14641615056f8194bb3/watchfiles-1.0.5-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:0125f91f70e0732a9f8ee01e49515c35d38ba48db507a50c5bdcad9503af5827", size = 453995 },
+    { url = "https://files.pythonhosted.org/packages/61/d9/f75d6840059320df5adecd2c687fbc18960a7f97b55c300d20f207d48aef/watchfiles-1.0.5-cp313-cp313-musllinux_1_1_aarch64.whl", hash = "sha256:13bb21f8ba3248386337c9fa51c528868e6c34a707f729ab041c846d52a0c69a", size = 629693 },
+    { url = "https://files.pythonhosted.org/packages/fc/17/180ca383f5061b61406477218c55d66ec118e6c0c51f02d8142895fcf0a9/watchfiles-1.0.5-cp313-cp313-musllinux_1_1_x86_64.whl", hash = "sha256:839ebd0df4a18c5b3c1b890145b5a3f5f64063c2a0d02b13c76d78fe5de34936", size = 624677 },
+    { url = "https://files.pythonhosted.org/packages/bf/15/714d6ef307f803f236d69ee9d421763707899d6298d9f3183e55e366d9af/watchfiles-1.0.5-cp313-cp313-win32.whl", hash = "sha256:4a8ec1e4e16e2d5bafc9ba82f7aaecfeec990ca7cd27e84fb6f191804ed2fcfc", size = 277804 },
+    { url = "https://files.pythonhosted.org/packages/a8/b4/c57b99518fadf431f3ef47a610839e46e5f8abf9814f969859d1c65c02c7/watchfiles-1.0.5-cp313-cp313-win_amd64.whl", hash = "sha256:f436601594f15bf406518af922a89dcaab416568edb6f65c4e5bbbad1ea45c11", size = 291087 },
+]
+
+[[package]]
 name = "wcwidth"
 version = "0.2.13"
 source = { registry = "https://pypi.org/simple/" }
 sdist = { url = "https://files.pythonhosted.org/packages/6c/63/53559446a878410fc5a5974feb13d31d78d752eb18aeba59c7fef1af7598/wcwidth-0.2.13.tar.gz", hash = "sha256:72ea0c06399eb286d978fdedb6923a9eb47e1c486ce63e9b4e64fc18303972b5", size = 101301 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/fd/84/fd2ba7aafacbad3c4201d395674fc6348826569da3c0937e75505ead3528/wcwidth-0.2.13-py2.py3-none-any.whl", hash = "sha256:3da69048e4540d84af32131829ff948f1e022c1c6bdb8d6102117aac784f6859", size = 34166 },
+]
+
+[[package]]
+name = "websockets"
+version = "15.0.1"
+source = { registry = "https://pypi.org/simple/" }
+sdist = { url = "https://files.pythonhosted.org/packages/21/e6/26d09fab466b7ca9c7737474c52be4f76a40301b08362eb2dbc19dcc16c1/websockets-15.0.1.tar.gz", hash = "sha256:82544de02076bafba038ce055ee6412d68da13ab47f0c60cab827346de828dee", size = 177016 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/cb/9f/51f0cf64471a9d2b4d0fc6c534f323b664e7095640c34562f5182e5a7195/websockets-15.0.1-cp313-cp313-macosx_10_13_universal2.whl", hash = "sha256:ee443ef070bb3b6ed74514f5efaa37a252af57c90eb33b956d35c8e9c10a1931", size = 175440 },
+    { url = "https://files.pythonhosted.org/packages/8a/05/aa116ec9943c718905997412c5989f7ed671bc0188ee2ba89520e8765d7b/websockets-15.0.1-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:5a939de6b7b4e18ca683218320fc67ea886038265fd1ed30173f5ce3f8e85675", size = 173098 },
+    { url = "https://files.pythonhosted.org/packages/ff/0b/33cef55ff24f2d92924923c99926dcce78e7bd922d649467f0eda8368923/websockets-15.0.1-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:746ee8dba912cd6fc889a8147168991d50ed70447bf18bcda7039f7d2e3d9151", size = 173329 },
+    { url = "https://files.pythonhosted.org/packages/31/1d/063b25dcc01faa8fada1469bdf769de3768b7044eac9d41f734fd7b6ad6d/websockets-15.0.1-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:595b6c3969023ecf9041b2936ac3827e4623bfa3ccf007575f04c5a6aa318c22", size = 183111 },
+    { url = "https://files.pythonhosted.org/packages/93/53/9a87ee494a51bf63e4ec9241c1ccc4f7c2f45fff85d5bde2ff74fcb68b9e/websockets-15.0.1-cp313-cp313-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:3c714d2fc58b5ca3e285461a4cc0c9a66bd0e24c5da9911e30158286c9b5be7f", size = 182054 },
+    { url = "https://files.pythonhosted.org/packages/ff/b2/83a6ddf56cdcbad4e3d841fcc55d6ba7d19aeb89c50f24dd7e859ec0805f/websockets-15.0.1-cp313-cp313-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:0f3c1e2ab208db911594ae5b4f79addeb3501604a165019dd221c0bdcabe4db8", size = 182496 },
+    { url = "https://files.pythonhosted.org/packages/98/41/e7038944ed0abf34c45aa4635ba28136f06052e08fc2168520bb8b25149f/websockets-15.0.1-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:229cf1d3ca6c1804400b0a9790dc66528e08a6a1feec0d5040e8b9eb14422375", size = 182829 },
+    { url = "https://files.pythonhosted.org/packages/e0/17/de15b6158680c7623c6ef0db361da965ab25d813ae54fcfeae2e5b9ef910/websockets-15.0.1-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:756c56e867a90fb00177d530dca4b097dd753cde348448a1012ed6c5131f8b7d", size = 182217 },
+    { url = "https://files.pythonhosted.org/packages/33/2b/1f168cb6041853eef0362fb9554c3824367c5560cbdaad89ac40f8c2edfc/websockets-15.0.1-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:558d023b3df0bffe50a04e710bc87742de35060580a293c2a984299ed83bc4e4", size = 182195 },
+    { url = "https://files.pythonhosted.org/packages/86/eb/20b6cdf273913d0ad05a6a14aed4b9a85591c18a987a3d47f20fa13dcc47/websockets-15.0.1-cp313-cp313-win32.whl", hash = "sha256:ba9e56e8ceeeedb2e080147ba85ffcd5cd0711b89576b83784d8605a7df455fa", size = 176393 },
+    { url = "https://files.pythonhosted.org/packages/1b/6c/c65773d6cab416a64d191d6ee8a8b1c68a09970ea6909d16965d26bfed1e/websockets-15.0.1-cp313-cp313-win_amd64.whl", hash = "sha256:e09473f095a819042ecb2ab9465aee615bd9c2028e4ef7d933600a8401c79561", size = 176837 },
+    { url = "https://files.pythonhosted.org/packages/fa/a8/5b41e0da817d64113292ab1f8247140aac61cbf6cfd085d6a0fa77f4984f/websockets-15.0.1-py3-none-any.whl", hash = "sha256:f7a866fbc1e97b5c617ee4116daaa09b722101d4a3c170c787450ba409f9736f", size = 169743 },
 ]
 
 [[package]]
