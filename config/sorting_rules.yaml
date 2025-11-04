@@ -1,0 +1,6 @@
+rules:
+  - name: "Organize Markdown Files"
+    extensions: [".md", ".markdown"]
+    target_dir: "docs/organized_markdown"
+    description: "Moves all Markdown files to a dedicated directory for better organization"
+    preserve_path: true

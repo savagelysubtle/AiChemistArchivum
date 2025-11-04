@@ -1,0 +1,22 @@
+data_dir: D:\Coding\AiChemistCodex\AiChemistArchivum\data
+database:
+  type: sqlite
+  path: D:\Coding\AiChemistCodex\AiChemistArchivum\data\archivum.db
+logging:
+  level: INFO
+  file: D:\Coding\AiChemistCodex\AiChemistArchivum\data\logs\archivum.log
+cache:
+  enabled: true
+  size_limit: 1GB
+search:
+  providers:
+  - regex
+  - similarity
+  - semantic
+  default_provider: semantic
+ingestion:
+  batch_size: 50
+  max_workers: 5
+versioning:
+  auto_version: true
+  change_threshold: 5.0

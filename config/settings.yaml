@@ -1,0 +1,36 @@
+# Default application settings for The AIchemist Codex
+# User-specific settings can override these.
+
+# Feature Flags (can be overridden by user config or env vars)
+features:
+  enable_enhanced_metadata: true
+  enable_windows_integration: true # May not be relevant if cross-platform
+  enable_regex_search: true
+  enable_semantic_search: true
+  enable_similarity_search: true
+
+# Search Settings
+search:
+  regex_max_results: 100
+  regex_max_complexity: 50
+  regex_timeout_ms: 5000
+  similarity_max_results: 20
+
+# Cache Settings
+cache:
+  ttl_seconds: 3600 # 1 hour
+  memory_cache_size_items: 1000
+
+# File Reading Settings
+file_reading:
+  max_preview_chars: 500
+  max_file_size_bytes: 10485760 # 10 MB
+
+# API Keys (Consider environment variables or secure storage instead for production)
+# api_keys:
+#   openai: "YOUR_DEFAULT_OR_PLACEHOLDER_KEY"
+
+# Other application-specific defaults
+# Example: Default project type or analysis model
+# default_project_type: "python"
+# analysis_model: "default_model_v1"

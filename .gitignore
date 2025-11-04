@@ -1,0 +1,329 @@
+################################
+###########  FILES  ############
+################################
+*.exe
+
+################################
+########### FOLDERS ############
+################################
+build/
+html/
+.benchmarks/
+reports/
+lectures/
+logs/
+models/
+ressources/
+.ruff_cache
+data/*.h5
+venv/
+.venv/
+.pre-commit-config.yaml
+.pre-commit/
+.pre-commit-hooks.yaml
+.pre-commit-hooks/
+.cursor/rules/**/*
+.cursor/**
+.cursorignore
+.cursor
+.github
+.env
+.svg
+.png
+error.md
+plan.md
+
+
+
+
+
+################################
+########### PYTHON #############
+################################
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.mypy_cache*
+
+*.isorted
+
+################################
+########### VS CODE ############
+################################
+.vscode/settings.json
+.vscode/c_cpp_properties.json
+*.code-workspace
+.history
+
+.cursorrules
+.project_checklist
+
+#
+
+#test files
+
+the_aichemist_codex_summary.json
+the_aichemist_codex_file_tree.json
+the_aichemist_codex_gpt_summary.json
+the_aichemist_codex_summary.md
+
+################################
+########### LOGS ##############
+################################
+# All log files
+*.log
+*.logs
+*.log.*
+**/log/*.txt
+
+################################
+####### TEMPORARY FILES ########
+################################
+# Temporary files - comprehensive patterns
+*.tmp
+*.temp
+*.~*
+*~
+*#
+.#*
+*.bak
+*.bakup
+*.old
+*.orig
+*.original
+*.previous
+*.save
+*.swp
+*.swo
+*.swn
+*.swap
+*copy
+*Copy*
+*.rej
+*.retry
+*.out
+*.pid
+*.state
+*.local
+*.lock
+!uv.lock
+!requirements.lock
+!poetry.lock
+!Pipfile.lock
+
+# System and editor temp files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+*.stackdump
+*~.nib
+.*.sw[a-p]
+Session.vim
+.netrwhist
+*.vi
+*_flymake.*
+*_BACKUP_*
+*_BASE_*
+*_LOCAL_*
+*_REMOTE_*
+*.patch
+*.diff
+
+# Temporary directories
+tmp/
+temp/
+.tmp/
+.temp/
+**/tmp/
+**/temp/
+__tmp__/
+__temp__/
+.trash/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pytype/
+.coverage
+.hypothesis/
+
+# IDE & build temp files
+.idea/
+.run/
+.gradle/
+.classpath
+.project
+.settings/
+.directory
+.loadpath
+.buildpath
+.target
+*.launch
+.externalToolBuilders/
+*.iml
+*.ipr
+*.iws
+nbproject/
+nb-configuration.xml
+profiles.xml
+atlassian-ide-plugin.xml
+.apt_generated/
+.apt_generated_test/
+.sass-cache/
+__MACOSX/
+node_modules/
+
+# Project specific temp files
+**/CodingPython_Projectsthe_aichemist_codextmp/
+*_build/
+*_output/
+*.toc
+*.dump
+*.pyc
+*_autosave.kra
+.nrepl-port
+.cpcache/
+.clj-kondo/
+.lsp/
+*.~*#
+autom4te.cache/
+compile_commands.json
+*.flc
+*tags
+**/tags
+TAGS
+.yarn/
+.fontconfig/
+.virtual_documents/
+.ipynb_aml_checkpoints/
+checkpoint
+
+# Backup files
+**/Backup/
+**/*backup*/
+**/*.backup
+**/*backup.*
+**/backups/
+_*/
+_bak/
+
+# Local environment variable overrides
+.env.local
+
+# cursor and roo folders
+.roo/
+.cursorignore
+.roomodes
+.benchmarks/
+.github/
+.vscode/
+bin/
+.uv_cache/

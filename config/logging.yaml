@@ -1,0 +1,40 @@
+# Default logging configuration for The AIchemist Codex
+version: 1
+disable_existing_loggers: false # Keep libraries' loggers active
+
+formatters:
+  simple:
+    format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    datefmt: "%Y-%m-%d %H:%M:%S"
+  detailed:
+    format: "%(asctime)s - %(name)s:%(lineno)d - %(levelname)s - [%(funcName)s] - %(message)s"
+    datefmt: "%Y-%m-%d %H:%M:%S"
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: INFO # Log INFO and higher to console by default
+    formatter: simple
+    stream: ext://sys.stdout
+  file:
+    class: logging.handlers.RotatingFileHandler
+    level: DEBUG # Log DEBUG and higher to file by default
+    formatter: detailed
+    # IMPORTANT: This path needs to be dynamically set during application startup
+    # It should point to the user's data directory (e.g., using platformdirs)
+    filename: "<<LOG_FILE_PATH>>" # Placeholder! e.g., data/the_aichemist_codex.log
+    maxBytes: 10485760 # 10MB
+    backupCount: 5
+    encoding: utf8
+
+loggers:
+  # Configure specific loggers if needed
+  # Example: Lower level for a noisy library
+  # "some_library":
+  #   level: WARNING
+  #   handlers: [console, file]
+  #   propagate: no
+
+root: # Root logger configuration
+  level: DEBUG # Set root level low to allow handlers to control effective level
+  handlers: [console, file]

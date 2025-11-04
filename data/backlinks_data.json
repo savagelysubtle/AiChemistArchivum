@@ -1,0 +1,1195 @@
+{
+  "metadata": {
+    "generation_time": "2025-03-28",
+    "total_notes": 35,
+    "total_links": 108
+  },
+  "backlinks": {
+    "daily-workflow.md": [
+      {
+        "source": "activeContext.md",
+        "type": "wikilink",
+        "text": "daily-workflow",
+        "context": "ancements to the AIchemist Codex.  ## Backlinks - [[daily-workflow]] - [[index]] - [[CLI-Architectur"
+      }
+    ],
+    "index.md": [
+      {
+        "source": "projectbrief.md",
+        "type": "wikilink",
+        "text": "index",
+        "context": "- Flexibility for future changes  ## Backlinks - [[index]]"
+      },
+      {
+        "source": "progress.md",
+        "type": "wikilink",
+        "text": "index",
+        "context": "suggestions between related notes  ## Backlinks - [[index]]  ## 2025-03-28 - Integration Enhancement"
+      },
+      {
+        "source": "productContext.md",
+        "type": "wikilink",
+        "text": "index",
+        "context": "e automation - Smarter assistance  ## Backlinks - [[index]]"
+      },
+      {
+        "source": "activeContext.md",
+        "type": "wikilink",
+        "text": "index",
+        "context": "emist Codex.  ## Backlinks - [[daily-workflow]] - [[index]] - [[CLI-Architecture]]"
+      }
+    ],
+    "CLI-Architecture.md": [
+      {
+        "source": "backlinks-analysis.md",
+        "type": "wikilink",
+        "text": "CLI-Architecture",
+        "context": "Context]] - [[Domain-Model-Graph]] - [[Models]] - [[CLI-Architecture]] - [[Domain-Layer]] - [[mcp-cl"
+      },
+      {
+        "source": "activeContext.md",
+        "type": "wikilink",
+        "text": "CLI-Architecture",
+        "context": "## Backlinks - [[daily-workflow]] - [[index]] - [[CLI-Architecture]]"
+      }
+    ],
+    "Memory Entity.md": [
+      {
+        "source": "backlinks-analysis.md",
+        "type": "wikilink",
+        "text": "Memory Entity",
+        "context": "te | Incoming Links | | ---- | -------------- | | [[Memory Entity]] | 0 | | [[activeContext]] | 0 | "
+      },
+      {
+        "source": "02-Architecture\\Layers\\Domain-Layer.md",
+        "type": "wikilink",
+        "text": "Memory Entity",
+        "context": "ntities for the AIchemist Codex.  ## Components - [[Memory Entity]] - [[Relationship Entity]] - [[Ta"
+      }
+    ],
+    "activeContext.md": [
+      {
+        "source": "00-Core\\MOCS\\index.md",
+        "type": "wikilink",
+        "text": "activeContext",
+        "context": "ct Brief]] - [[productContext|Product Context]] - [[activeContext|Active Context]] - [[progress|Proj"
+      },
+      {
+        "source": "03-Implementation\\CLI\\CLI-Architecture.md",
+        "type": "wikilink",
+        "text": "activeContext",
+        "context": "aces/cli/`  ## Current Status As described in the [[activeContext]], we're currently: - Implementing"
+      },
+      {
+        "source": "00-Core\\Guides\\daily-workflow.md",
+        "type": "wikilink",
+        "text": "activeContext",
+        "context": "## 2. Update Active Context - Review and update [[activeContext]] - Link to relevant components/enti"
+      },
+      {
+        "source": "backlinks-analysis.md",
+        "type": "wikilink",
+        "text": "activeContext",
+        "context": "-- | -------------- | | [[Memory Entity]] | 0 | | [[activeContext]] | 0 | | [[systemPatterns]] | 0 |"
+      },
+      {
+        "source": "sequential-thinking-obsidian-workflow.md",
+        "type": "wikilink",
+        "text": "activeContext",
+        "context": "g direction  ## Backlinks - [[mcp-integration]] - [[activeContext]] - [[progress]]"
+      }
+    ],
+    "systemPatterns.md": [
+      {
+        "source": "00-Core\\MOCS\\Architecture-MOC.md",
+        "type": "wikilink",
+        "text": "systemPatterns",
+        "context": "note ---  # Architecture Map  ## System Design - [[systemPatterns|System Patterns & Architecture]] -"
+      },
+      {
+        "source": "backlinks-analysis.md",
+        "type": "wikilink",
+        "text": "systemPatterns",
+        "context": "Memory Entity]] | 0 | | [[activeContext]] | 0 | | [[systemPatterns]] | 0 | | [[projectbrief]] | 0 | "
+      }
+    ],
+    "projectbrief.md": [
+      {
+        "source": "00-Core\\MOCS\\index.md",
+        "type": "wikilink",
+        "text": "projectbrief",
+        "context": "ting point for navigation.  ## Project Overview - [[projectbrief|Project Brief]] - [[productContext|"
+      },
+      {
+        "source": "backlinks-analysis.md",
+        "type": "wikilink",
+        "text": "projectbrief",
+        "context": "ctiveContext]] | 0 | | [[systemPatterns]] | 0 | | [[projectbrief]] | 0 |  ## Orphaned Notes  These n"
+      }
+    ],
+    "codebase-review.md": [
+      {
+        "source": "backlinks-analysis.md",
+        "type": "wikilink",
+        "text": "codebase-review",
+        "context": "t need better integration:  - [[activeContext]] - [[codebase-review]] - [[mcp-document-insights]] - "
+      }
+    ],
+    "mcp-document-insights.md": [
+      {
+        "source": "backlinks-analysis.md",
+        "type": "wikilink",
+        "text": "mcp-document-insights",
+        "context": "ion:  - [[activeContext]] - [[codebase-review]] - [[mcp-document-insights]] - [[mcp-integration]] - "
+      }
+    ],
+    "mcp-integration.md": [
+      {
+        "source": "sequential-thinking-obsidian-workflow.md",
+        "type": "wikilink",
+        "text": "mcp-integration",
+        "context": "ation requires changing direction  ## Backlinks - [[mcp-integration]] - [[activeContext]] - [[progre"
+      },
+      {
+        "source": "backlinks-analysis.md",
+        "type": "wikilink",
+        "text": "mcp-integration",
+        "context": "[[codebase-review]] - [[mcp-document-insights]] - [[mcp-integration]] - [[Memory Entity]] - [[memory"
+      }
+    ],
+    "memory-bank-structure.md": [
+      {
+        "source": "backlinks-analysis.md",
+        "type": "wikilink",
+        "text": "memory-bank-structure",
+        "context": "hts]] - [[mcp-integration]] - [[Memory Entity]] - [[memory-bank-structure]] - [[MEMORY_BANK_GUIDE]] "
+      }
+    ],
+    "MEMORY_BANK_GUIDE.md": [
+      {
+        "source": "backlinks-analysis.md",
+        "type": "wikilink",
+        "text": "MEMORY_BANK_GUIDE",
+        "context": "- [[Memory Entity]] - [[memory-bank-structure]] - [[MEMORY_BANK_GUIDE]] - [[productContext]] - [[pro"
+      }
+    ],
+    "productContext.md": [
+      {
+        "source": "00-Core\\MOCS\\index.md",
+        "type": "wikilink",
+        "text": "productContext",
+        "context": "oject Overview - [[projectbrief|Project Brief]] - [[productContext|Product Context]] - [[activeConte"
+      },
+      {
+        "source": "backlinks-analysis.md",
+        "type": "wikilink",
+        "text": "productContext",
+        "context": "memory-bank-structure]] - [[MEMORY_BANK_GUIDE]] - [[productContext]] - [[progress]] - [[projectbrief"
+      }
+    ],
+    "progress.md": [
+      {
+        "source": "backlinks-analysis.md",
+        "type": "wikilink",
+        "text": "progress",
+        "context": "]] - [[MEMORY_BANK_GUIDE]] - [[productContext]] - [[progress]] - [[projectbrief]] - [[sequential-thi"
+      },
+      {
+        "source": "sequential-thinking-obsidian-workflow.md",
+        "type": "wikilink",
+        "text": "progress",
+        "context": "links - [[mcp-integration]] - [[activeContext]] - [[progress]]"
+      },
+      {
+        "source": "00-Core\\MOCS\\index.md",
+        "type": "wikilink",
+        "text": "progress",
+        "context": "ct Context]] - [[activeContext|Active Context]] - [[progress|Project Progress]]  ## Main Areas - [[A"
+      }
+    ],
+    "sequential-thinking-obsidian-workflow.md": [
+      {
+        "source": "backlinks-analysis.md",
+        "type": "wikilink",
+        "text": "sequential-thinking-obsidian-workflow",
+        "context": "ductContext]] - [[progress]] - [[projectbrief]] - [[sequential-thinking-obsidian-workflow]] - [[syst"
+      }
+    ],
+    "techContext.md": [
+      {
+        "source": "backlinks-analysis.md",
+        "type": "wikilink",
+        "text": "techContext",
+        "context": "inking-obsidian-workflow]] - [[systemPatterns]] - [[techContext]] - [[Domain-Model-Graph]] - [[Model"
+      },
+      {
+        "source": "02-Architecture\\MCP\\mcp-implementation.md",
+        "type": "wikilink",
+        "text": "techContext",
+        "context": "ystemPatterns]]: Related architectural patterns - [[techContext]]: Technical context and decisions  "
+      }
+    ],
+    "Domain-Model-Graph.md": [
+      {
+        "source": "backlinks-analysis.md",
+        "type": "wikilink",
+        "text": "Domain-Model-Graph",
+        "context": "rkflow]] - [[systemPatterns]] - [[techContext]] - [[Domain-Model-Graph]] - [[Models]] - [[CLI-Archit"
+      }
+    ],
+    "Models.md": [
+      {
+        "source": "backlinks-analysis.md",
+        "type": "wikilink",
+        "text": "Models",
+        "context": "ns]] - [[techContext]] - [[Domain-Model-Graph]] - [[Models]] - [[CLI-Architecture]] - [[Domain-Layer"
+      }
+    ],
+    "Domain-Layer.md": [
+      {
+        "source": "backlinks-analysis.md",
+        "type": "wikilink",
+        "text": "Domain-Layer",
+        "context": "del-Graph]] - [[Models]] - [[CLI-Architecture]] - [[Domain-Layer]] - [[mcp-client-guide]] - [[mcp-im"
+      },
+      {
+        "source": "00-Core\\MOCS\\Architecture-MOC.md",
+        "type": "wikilink",
+        "text": "Domain-Layer",
+        "context": "chitecture Principles]]  ## Layer Documentation - [[Domain-Layer|Domain Layer Structure]] - [[Applic"
+      }
+    ],
+    "mcp-client-guide.md": [
+      {
+        "source": "backlinks-analysis.md",
+        "type": "wikilink",
+        "text": "mcp-client-guide",
+        "context": "els]] - [[CLI-Architecture]] - [[Domain-Layer]] - [[mcp-client-guide]] - [[mcp-implementation]] - [["
+      }
+    ],
+    "mcp-implementation.md": [
+      {
+        "source": "02-Architecture\\MCP\\mcp-servers.md",
+        "type": "wikilink",
+        "text": "mcp-implementation",
+        "context": "rences - [[mcp-overview]]: General MCP concepts - [[mcp-implementation]]: Technical implementation d"
+      },
+      {
+        "source": "02-Architecture\\MCP\\mcp-client-guide.md",
+        "type": "wikilink",
+        "text": "mcp-implementation",
+        "context": "rences - [[mcp-overview]]: General MCP concepts - [[mcp-implementation]]: Server-side implementation"
+      },
+      {
+        "source": "backlinks-analysis.md",
+        "type": "wikilink",
+        "text": "mcp-implementation",
+        "context": "ure]] - [[Domain-Layer]] - [[mcp-client-guide]] - [[mcp-implementation]] - [[mcp-servers]]  ... and "
+      }
+    ],
+    "mcp-servers.md": [
+      {
+        "source": "backlinks-analysis.md",
+        "type": "wikilink",
+        "text": "mcp-servers",
+        "context": "- [[mcp-client-guide]] - [[mcp-implementation]] - [[mcp-servers]]  ... and 14 more.  ## Potential Mi"
+      },
+      {
+        "source": "02-Architecture\\MCP\\mcp-client-guide.md",
+        "type": "wikilink",
+        "text": "mcp-servers",
+        "context": "cp-implementation]]: Server-side implementation - [[mcp-servers]]: Available servers - [[SystemPatte"
+      }
+    ],
+    ".md": [
+      {
+        "source": "MEMORY_BANK_GUIDE.md",
+        "type": "wikilink",
+        "text": "",
+        "context": "ppropriately  3. **Linking**    - Use Obsidian's `[[]]` syntax for internal links    - Create bidire"
+      },
+      {
+        "source": "memory-bank-structure.md",
+        "type": "wikilink",
+        "text": "",
+        "context": "ders 2. **Link Related Content**: Use Obsidian's `[[]]` links to connect related notes 3. **Update C"
+      }
+    ],
+    "Link to related note.md": [
+      {
+        "source": "MEMORY_BANK_GUIDE.md",
+        "type": "wikilink",
+        "text": "Link to related note",
+        "context": "ails    Main content sections     ## Related    - [[Link to related note]]    - External [reference]"
+      },
+      {
+        "source": "00-Core\\Templates\\note.md",
+        "type": "wikilink",
+        "text": "Link to related note",
+        "context": "## Details  Main content goes here.  ## Related - [[Link to related note]]  ## Backlinks"
+      }
+    ],
+    "document-name.md": [
+      {
+        "source": "sequential-thinking-obsidian-workflow.md",
+        "type": "wikilink",
+        "text": "document-name",
+        "context": "tions 3. **Create Proper Backlinks**: Always use `[[document-name]]` wiki-link syntax when referenci"
+      }
+    ],
+    "Architecture-MOC.md": [
+      {
+        "source": "00-Core\\MOCS\\index.md",
+        "type": "wikilink",
+        "text": "Architecture-MOC",
+        "context": "- [[progress|Project Progress]]  ## Main Areas - [[Architecture-MOC|System Architecture]] - [[Domain"
+      },
+      {
+        "source": "systemPatterns.md",
+        "type": "wikilink",
+        "text": "Architecture-MOC",
+        "context": "andling - Check output formatting  ## Backlinks - [[Architecture-MOC]]"
+      },
+      {
+        "source": "00-Core\\MCP\\mcp-overview.md",
+        "type": "wikilink",
+        "text": "Architecture-MOC",
+        "context": "al implementation details  ### Cross-References - [[Architecture-MOC]]: MCP architectural decisions "
+      }
+    ],
+    "Memory.md": [
+      {
+        "source": "00-Core\\MOCS\\Architecture-MOC.md",
+        "type": "wikilink",
+        "text": "Memory",
+        "context": ":  - [[File]] - Represents a file with metadata - [[Memory]] - Knowledge unit with relationships - ["
+      },
+      {
+        "source": "01-Domain\\Domain-Model-Graph.md",
+        "type": "wikilink",
+        "text": "Memory",
+        "context": "ties and their relationships:  ## Core Entities - [[Memory]] - Stores knowledge with metadata - [[Re"
+      }
+    ],
+    "Relationship.md": [
+      {
+        "source": "00-Core\\MOCS\\Architecture-MOC.md",
+        "type": "wikilink",
+        "text": "Relationship",
+        "context": "[[Memory]] - Knowledge unit with relationships - [[Relationship]] - Connection between entities  The"
+      },
+      {
+        "source": "01-Domain\\Domain-Model-Graph.md",
+        "type": "wikilink",
+        "text": "Relationship",
+        "context": "s - [[Memory]] - Stores knowledge with metadata - [[Relationship]] - Connects entities - [[Tag]] - C"
+      },
+      {
+        "source": "01-Domain\\Entities\\Memory.md",
+        "type": "wikilink",
+        "text": "Relationship",
+        "context": "ed_at: datetime  ## Relationships - **Has many**: [[Relationship]] - **Tagged with**: [[Tag]] - **Ma"
+      }
+    ],
+    "Tag.md": [
+      {
+        "source": "01-Domain\\Entities\\Memory.md",
+        "type": "wikilink",
+        "text": "Tag",
+        "context": "**Has many**: [[Relationship]] - **Tagged with**: [[Tag]] - **Managed by**: [[MemoryRepository]]  ##"
+      },
+      {
+        "source": "01-Domain\\Domain-Model-Graph.md",
+        "type": "wikilink",
+        "text": "Tag",
+        "context": "metadata - [[Relationship]] - Connects entities - [[Tag]] - Categorizes entities - [[File]] - Repres"
+      }
+    ],
+    "File.md": [
+      {
+        "source": "00-Core\\MOCS\\Architecture-MOC.md",
+        "type": "wikilink",
+        "text": "File",
+        "context": "st system defines these core [[entity]] types:  - [[File]] - Represents a file with metadata - [[Mem"
+      },
+      {
+        "source": "01-Domain\\Domain-Model-Graph.md",
+        "type": "wikilink",
+        "text": "File",
+        "context": "nects entities - [[Tag]] - Categorizes entities - [[File]] - Represents filesystem objects  ## Value"
+      }
+    ],
+    "Metadata.md": [
+      {
+        "source": "01-Domain\\Domain-Model-Graph.md",
+        "type": "wikilink",
+        "text": "Metadata",
+        "context": "Represents filesystem objects  ## Value Objects - [[Metadata]] - Additional information - [[Strength"
+      }
+    ],
+    "Strength.md": [
+      {
+        "source": "01-Domain\\Domain-Model-Graph.md",
+        "type": "wikilink",
+        "text": "Strength",
+        "context": "Objects - [[Metadata]] - Additional information - [[Strength]] - Relationship strength indicator - ["
+      }
+    ],
+    "Content.md": [
+      {
+        "source": "01-Domain\\Domain-Model-Graph.md",
+        "type": "wikilink",
+        "text": "Content",
+        "context": "[[Strength]] - Relationship strength indicator - [[Content]] - Actual content data  ## Services - [["
+      }
+    ],
+    "MemoryService.md": [
+      {
+        "source": "01-Domain\\Domain-Model-Graph.md",
+        "type": "wikilink",
+        "text": "MemoryService",
+        "context": "[[Content]] - Actual content data  ## Services - [[MemoryService]] - Manages memory operations - [[R"
+      }
+    ],
+    "RelationshipService.md": [
+      {
+        "source": "01-Domain\\Domain-Model-Graph.md",
+        "type": "wikilink",
+        "text": "RelationshipService",
+        "context": "- [[MemoryService]] - Manages memory operations - [[RelationshipService]] - Handles relationship ope"
+      }
+    ],
+    "TaggingService.md": [
+      {
+        "source": "01-Domain\\Domain-Model-Graph.md",
+        "type": "wikilink",
+        "text": "TaggingService",
+        "context": "shipService]] - Handles relationship operations - [[TaggingService]] - Manages tagging operations  #"
+      }
+    ],
+    "MemoryRepository.md": [
+      {
+        "source": "01-Domain\\Entities\\Memory.md",
+        "type": "wikilink",
+        "text": "MemoryRepository",
+        "context": "ip]] - **Tagged with**: [[Tag]] - **Managed by**: [[MemoryRepository]]  ## Usage Examples"
+      },
+      {
+        "source": "01-Domain\\Domain-Model-Graph.md",
+        "type": "wikilink",
+        "text": "MemoryRepository",
+        "context": "] - Manages tagging operations  ## Repositories - [[MemoryRepository]] - Stores and retrieves memori"
+      }
+    ],
+    "RelationshipRepository.md": [
+      {
+        "source": "01-Domain\\Domain-Model-Graph.md",
+        "type": "wikilink",
+        "text": "RelationshipRepository",
+        "context": "oryRepository]] - Stores and retrieves memories - [[RelationshipRepository]] - Manages relationship "
+      }
+    ],
+    "TagRepository.md": [
+      {
+        "source": "01-Domain\\Domain-Model-Graph.md",
+        "type": "wikilink",
+        "text": "TagRepository",
+        "context": "shipRepository]] - Manages relationship storage - [[TagRepository]] - Manages tag storage"
+      }
+    ],
+    "CLI Entry Point.md": [
+      {
+        "source": "03-Implementation\\CLI\\CLI-Architecture.md",
+        "type": "wikilink",
+        "text": "CLI Entry Point",
+        "context": "acting with the AIchemist Codex.  ## Components - [[CLI Entry Point]] - Initial user interface - [[C"
+      }
+    ],
+    "Command Context.md": [
+      {
+        "source": "03-Implementation\\CLI\\CLI-Architecture.md",
+        "type": "wikilink",
+        "text": "Command Context",
+        "context": "- [[CLI Entry Point]] - Initial user interface - [[Command Context]] - Service management system - ["
+      }
+    ],
+    "Command Base.md": [
+      {
+        "source": "03-Implementation\\CLI\\CLI-Architecture.md",
+        "type": "wikilink",
+        "text": "Command Base",
+        "context": "[[Command Context]] - Service management system - [[Command Base]] - Base class for all commands - ["
+      }
+    ],
+    "Output Formatter.md": [
+      {
+        "source": "03-Implementation\\CLI\\CLI-Architecture.md",
+        "type": "wikilink",
+        "text": "Output Formatter",
+        "context": "[[Command Base]] - Base class for all commands - [[Output Formatter]] - Display formatting system  #"
+      }
+    ],
+    "CLI Service Management Decision.md": [
+      {
+        "source": "03-Implementation\\CLI\\CLI-Architecture.md",
+        "type": "wikilink",
+        "text": "CLI Service Management Decision",
+        "context": "eloping output formatting  ## Related Decisions - [[CLI Service Management Decision]] - [[Command St"
+      }
+    ],
+    "Command Structure Pattern.md": [
+      {
+        "source": "03-Implementation\\CLI\\CLI-Architecture.md",
+        "type": "wikilink",
+        "text": "Command Structure Pattern",
+        "context": "Decisions - [[CLI Service Management Decision]] - [[Command Structure Pattern]]"
+      }
+    ],
+    "Relationship Entity.md": [
+      {
+        "source": "02-Architecture\\Layers\\Domain-Layer.md",
+        "type": "wikilink",
+        "text": "Relationship Entity",
+        "context": "emist Codex.  ## Components - [[Memory Entity]] - [[Relationship Entity]] - [[Tag Entity]] - [[Repos"
+      }
+    ],
+    "Tag Entity.md": [
+      {
+        "source": "02-Architecture\\Layers\\Domain-Layer.md",
+        "type": "wikilink",
+        "text": "Tag Entity",
+        "context": "s - [[Memory Entity]] - [[Relationship Entity]] - [[Tag Entity]] - [[Repository Interfaces]]  ## Pat"
+      }
+    ],
+    "Repository Interfaces.md": [
+      {
+        "source": "02-Architecture\\Layers\\Domain-Layer.md",
+        "type": "wikilink",
+        "text": "Repository Interfaces",
+        "context": "ty]] - [[Relationship Entity]] - [[Tag Entity]] - [[Repository Interfaces]]  ## Patterns - [[Entity-"
+      }
+    ],
+    "Entity-Value Object Pattern.md": [
+      {
+        "source": "02-Architecture\\Layers\\Domain-Layer.md",
+        "type": "wikilink",
+        "text": "Entity-Value Object Pattern",
+        "context": "tity]] - [[Repository Interfaces]]  ## Patterns - [[Entity-Value Object Pattern]] - [[Repository Pat"
+      }
+    ],
+    "Repository Pattern.md": [
+      {
+        "source": "02-Architecture\\Layers\\Domain-Layer.md",
+        "type": "wikilink",
+        "text": "Repository Pattern",
+        "context": "## Patterns - [[Entity-Value Object Pattern]] - [[Repository Pattern]] - [[Domain Events]]  ## Imple"
+      }
+    ],
+    "Domain Events.md": [
+      {
+        "source": "02-Architecture\\Layers\\Domain-Layer.md",
+        "type": "wikilink",
+        "text": "Domain Events",
+        "context": "Value Object Pattern]] - [[Repository Pattern]] - [[Domain Events]]  ## Implementation Located in `s"
+      }
+    ],
+    "Rich Domain Model Decision.md": [
+      {
+        "source": "02-Architecture\\Layers\\Domain-Layer.md",
+        "type": "wikilink",
+        "text": "Rich Domain Model Decision",
+        "context": "e_aichemist_codex/domain/`  ## Design Decisions - [[Rich Domain Model Decision]] - [[Entity Relation"
+      }
+    ],
+    "Entity Relationship Structure.md": [
+      {
+        "source": "02-Architecture\\Layers\\Domain-Layer.md",
+        "type": "wikilink",
+        "text": "Entity Relationship Structure",
+        "context": "sign Decisions - [[Rich Domain Model Decision]] - [[Entity Relationship Structure]]"
+      }
+    ],
+    "mcp-overview.md": [
+      {
+        "source": "02-Architecture\\MCP\\mcp-servers.md",
+        "type": "wikilink",
+        "text": "mcp-overview",
+        "context": "limiting - Error handling  ## Cross-References - [[mcp-overview]]: General MCP concepts - [[mcp-impl"
+      },
+      {
+        "source": "02-Architecture\\MCP\\mcp-implementation.md",
+        "type": "wikilink",
+        "text": "mcp-overview",
+        "context": "revent directory traversal  ## Cross-References - [[mcp-overview]]: General MCP overview - [[SystemP"
+      },
+      {
+        "source": "02-Architecture\\MCP\\mcp-client-guide.md",
+        "type": "wikilink",
+        "text": "mcp-overview",
+        "context": "verify_ssl=True ) ```  ## Cross-References - [[mcp-overview]]: General MCP concepts - [[mcp-implemen"
+      }
+    ],
+    "SystemPatterns.md": [
+      {
+        "source": "02-Architecture\\MCP\\mcp-client-guide.md",
+        "type": "wikilink",
+        "text": "SystemPatterns",
+        "context": "ementation - [[mcp-servers]]: Available servers - [[SystemPatterns]]: Integration patterns  ## Versi"
+      },
+      {
+        "source": "00-Core\\MCP\\mcp-overview.md",
+        "type": "wikilink",
+        "text": "SystemPatterns",
+        "context": "plementation]]: Specific implementation details - [[SystemPatterns]]: Related system patterns  ## Be"
+      },
+      {
+        "source": "02-Architecture\\MCP\\mcp-servers.md",
+        "type": "wikilink",
+        "text": "SystemPatterns",
+        "context": "lementation]]: Technical implementation details - [[SystemPatterns]]: Integration patterns  ## Commu"
+      },
+      {
+        "source": "02-Architecture\\MCP\\mcp-implementation.md",
+        "type": "wikilink",
+        "text": "SystemPatterns",
+        "context": "rences - [[mcp-overview]]: General MCP overview - [[SystemPatterns]]: Related architectural patterns"
+      }
+    ],
+    "Implementation.md": [
+      {
+        "source": "00-Core\\MCP\\mcp-overview.md",
+        "type": "wikilink",
+        "text": "Implementation",
+        "context": "Architecture-MOC]]: MCP architectural decisions - [[Implementation]]: Specific implementation detail"
+      }
+    ],
+    "Clean-Architecture.md": [
+      {
+        "source": "00-Core\\MOCS\\Architecture-MOC.md",
+        "type": "wikilink",
+        "text": "Clean-Architecture",
+        "context": "systemPatterns|System Patterns & Architecture]] - [[Clean-Architecture|Clean Architecture Principles"
+      }
+    ],
+    "Application-Layer.md": [
+      {
+        "source": "00-Core\\MOCS\\Architecture-MOC.md",
+        "type": "wikilink",
+        "text": "Application-Layer",
+        "context": "ation - [[Domain-Layer|Domain Layer Structure]] - [[Application-Layer|Application Layer Design]] - ["
+      }
+    ],
+    "Infrastructure-Layer.md": [
+      {
+        "source": "00-Core\\MOCS\\Architecture-MOC.md",
+        "type": "wikilink",
+        "text": "Infrastructure-Layer",
+        "context": "[[Application-Layer|Application Layer Design]] - [[Infrastructure-Layer|Infrastructure Services]] - "
+      }
+    ],
+    "Interface-Layer.md": [
+      {
+        "source": "00-Core\\MOCS\\Architecture-MOC.md",
+        "type": "wikilink",
+        "text": "Interface-Layer",
+        "context": "[Infrastructure-Layer|Infrastructure Services]] - [[Interface-Layer|Interface Adapters]]  ## Integra"
+      }
+    ],
+    "Integration-Patterns.md": [
+      {
+        "source": "00-Core\\MOCS\\Architecture-MOC.md",
+        "type": "wikilink",
+        "text": "Integration-Patterns",
+        "context": "face-Layer|Interface Adapters]]  ## Integration - [[Integration-Patterns|Integration Patterns & Appr"
+      }
+    ],
+    "entity.md": [
+      {
+        "source": "00-Core\\MOCS\\Architecture-MOC.md",
+        "type": "wikilink",
+        "text": "entity",
+        "context": "n Models  The AIchemist system defines these core [[entity]] types:  - [[File]] - Represents a file "
+      }
+    ],
+    "01-Domain-Layer/Models.md": [
+      {
+        "source": "00-Core\\MOCS\\Architecture-MOC.md",
+        "type": "wikilink",
+        "text": "01-Domain-Layer/Models.md",
+        "context": "een entities  These models are implemented in the [[01-Domain-Layer/Models.md]] module."
+      }
+    ],
+    "Domain-MOC.md": [
+      {
+        "source": "00-Core\\MOCS\\index.md",
+        "type": "wikilink",
+        "text": "Domain-MOC",
+        "context": "reas - [[Architecture-MOC|System Architecture]] - [[Domain-MOC|Domain Model]] - [[Implementation-MOC"
+      }
+    ],
+    "Implementation-MOC.md": [
+      {
+        "source": "00-Core\\MOCS\\index.md",
+        "type": "wikilink",
+        "text": "Implementation-MOC",
+        "context": "em Architecture]] - [[Domain-MOC|Domain Model]] - [[Implementation-MOC|Implementation Details]]  ## "
+      }
+    ],
+    "CLI Architecture Enhancement.md": [
+      {
+        "source": "00-Core\\MOCS\\index.md",
+        "type": "wikilink",
+        "text": "CLI Architecture Enhancement",
+        "context": "-MOC|Implementation Details]]  ## Current Focus - [[CLI Architecture Enhancement]] - [[Infrastructur"
+      }
+    ],
+    "Infrastructure Implementation.md": [
+      {
+        "source": "00-Core\\MOCS\\index.md",
+        "type": "wikilink",
+        "text": "Infrastructure Implementation",
+        "context": "urrent Focus - [[CLI Architecture Enhancement]] - [[Infrastructure Implementation]] - [[Domain Layer"
+      }
+    ],
+    "Domain Layer Implementation.md": [
+      {
+        "source": "00-Core\\MOCS\\index.md",
+        "type": "wikilink",
+        "text": "Domain Layer Implementation",
+        "context": "hancement]] - [[Infrastructure Implementation]] - [[Domain Layer Implementation]]"
+      }
+    ],
+    "Dependency 1.md": [
+      {
+        "source": "00-Core\\Templates\\component.md",
+        "type": "wikilink",
+        "text": "Dependency 1",
+        "context": "nsibility 1 - Responsibility 2  ## Dependencies - [[Dependency 1]] - [[Dependency 2]]  ## Implementa"
+      }
+    ],
+    "Dependency 2.md": [
+      {
+        "source": "00-Core\\Templates\\component.md",
+        "type": "wikilink",
+        "text": "Dependency 2",
+        "context": "nsibility 2  ## Dependencies - [[Dependency 1]] - [[Dependency 2]]  ## Implementation Details"
+      }
+    ],
+    "Link to related design.md": [
+      {
+        "source": "00-Core\\Templates\\design.md",
+        "type": "wikilink",
+        "text": "Link to related design",
+        "context": "s - Question 1 - Question 2  ## Related Designs - [[Link to related design]]  ## References - Refere"
+      }
+    ],
+    "Link to related doc.md": [
+      {
+        "source": "00-Core\\Templates\\documentation.md",
+        "type": "wikilink",
+        "text": "Link to related doc",
+        "context": "and their solutions.  ## Related Documentation - [[Link to related doc]]  ## References - External r"
+      }
+    ],
+    "Link to related feature.md": [
+      {
+        "source": "00-Core\\Templates\\feature.md",
+        "type": "wikilink",
+        "text": "Link to related feature",
+        "context": "ependency 1 - Dependency 2  ## Related Features - [[Link to related feature]]  ## Backlinks"
+      }
+    ]
+  },
+  "note_metadata": {
+    "activeContext.md": {
+      "title": "activeContext",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "documented",
+      "type": "note",
+      "tags": []
+    },
+    "backlinks-analysis.md": {
+      "title": "backlinks-analysis",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "generated",
+      "type": "analysis",
+      "tags": []
+    },
+    "codebase-review.md": {
+      "title": "codebase-review",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "documented",
+      "type": "note",
+      "tags": []
+    },
+    "mcp-document-insights.md": {
+      "title": "mcp-document-insights",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "documented",
+      "type": "note",
+      "tags": []
+    },
+    "mcp-integration.md": {
+      "title": "mcp-integration",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "documented",
+      "type": "note",
+      "tags": []
+    },
+    "Memory Entity.md": {
+      "title": "Memory Entity",
+      "created": "",
+      "last_modified": "",
+      "status": "",
+      "type": "",
+      "tags": []
+    },
+    "memory-bank-structure.md": {
+      "title": "memory-bank-structure",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "documented",
+      "type": "note",
+      "tags": []
+    },
+    "MEMORY_BANK_GUIDE.md": {
+      "title": "MEMORY_BANK_GUIDE",
+      "created": "",
+      "last_modified": "",
+      "status": "",
+      "type": "",
+      "tags": []
+    },
+    "productContext.md": {
+      "title": "productContext",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "documented",
+      "type": "note",
+      "tags": []
+    },
+    "progress.md": {
+      "title": "progress",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "inprogress",
+      "type": "note",
+      "tags": []
+    },
+    "projectbrief.md": {
+      "title": "projectbrief",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "documented",
+      "type": "note",
+      "tags": []
+    },
+    "sequential-thinking-obsidian-workflow.md": {
+      "title": "sequential-thinking-obsidian-workflow",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "documented",
+      "type": "guide",
+      "tags": []
+    },
+    "systemPatterns.md": {
+      "title": "systemPatterns",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "documented",
+      "type": "note",
+      "tags": []
+    },
+    "techContext.md": {
+      "title": "techContext",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "documented",
+      "type": "note",
+      "tags": []
+    },
+    "01-Domain\\Domain-Model-Graph.md": {
+      "title": "Domain-Model-Graph",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "documented",
+      "type": "entity",
+      "tags": []
+    },
+    "01-Domain-Layer\\Models.md": {
+      "title": "Models",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "documented",
+      "type": "entity",
+      "tags": []
+    },
+    "03-Implementation\\CLI\\CLI-Architecture.md": {
+      "title": "CLI-Architecture",
+      "created": "",
+      "last_modified": "",
+      "status": "implemented",
+      "type": "component",
+      "tags": []
+    },
+    "02-Architecture\\Layers\\Domain-Layer.md": {
+      "title": "Domain-Layer",
+      "created": "",
+      "last_modified": "",
+      "status": "implemented",
+      "type": "layer",
+      "tags": []
+    },
+    "02-Architecture\\MCP\\mcp-client-guide.md": {
+      "title": "mcp-client-guide",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "documented",
+      "type": "component",
+      "tags": []
+    },
+    "02-Architecture\\MCP\\mcp-implementation.md": {
+      "title": "mcp-implementation",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "documented",
+      "type": "component",
+      "tags": []
+    },
+    "02-Architecture\\MCP\\mcp-servers.md": {
+      "title": "mcp-servers",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "documented",
+      "type": "component",
+      "tags": []
+    },
+    "01-Domain\\Entities\\Memory.md": {
+      "title": "Memory",
+      "created": "",
+      "last_modified": "",
+      "status": "implemented",
+      "type": "entity",
+      "tags": []
+    },
+    "00-Core\\Guides\\daily-workflow.md": {
+      "title": "daily-workflow",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "documented",
+      "type": "note",
+      "tags": []
+    },
+    "00-Core\\Guides\\folder-structure.md": {
+      "title": "folder-structure",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "documented",
+      "type": "note",
+      "tags": []
+    },
+    "00-Core\\Guides\\recommended-plugins.md": {
+      "title": "recommended-plugins",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "documented",
+      "type": "note",
+      "tags": []
+    },
+    "00-Core\\Guides\\tags-and-metadata.md": {
+      "title": "tags-and-metadata",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "documented",
+      "type": "note",
+      "tags": []
+    },
+    "00-Core\\Guides\\using-graph-view.md": {
+      "title": "using-graph-view",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "documented",
+      "type": "note",
+      "tags": []
+    },
+    "00-Core\\MCP\\mcp-overview.md": {
+      "title": "mcp-overview",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "documented",
+      "type": "reference",
+      "tags": []
+    },
+    "00-Core\\MOCS\\Architecture-MOC.md": {
+      "title": "Architecture-MOC",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "documented",
+      "type": "note",
+      "tags": []
+    },
+    "00-Core\\MOCS\\index.md": {
+      "title": "index",
+      "created": "2025-03-28",
+      "last_modified": "2025-03-28",
+      "status": "documented",
+      "type": "note",
+      "tags": []
+    },
+    "00-Core\\Templates\\component.md": {
+      "title": "component",
+      "created": "",
+      "last_modified": "",
+      "status": "",
+      "type": "",
+      "tags": []
+    },
+    "00-Core\\Templates\\design.md": {
+      "title": "design",
+      "created": "",
+      "last_modified": "",
+      "status": "draft",
+      "type": "design",
+      "tags": []
+    },
+    "00-Core\\Templates\\documentation.md": {
+      "title": "documentation",
+      "created": "",
+      "last_modified": "",
+      "status": "draft",
+      "type": "doc",
+      "tags": []
+    },
+    "00-Core\\Templates\\feature.md": {
+      "title": "feature",
+      "created": "",
+      "last_modified": "",
+      "status": "draft",
+      "type": "spec",
+      "tags": []
+    },
+    "00-Core\\Templates\\note.md": {
+      "title": "note",
+      "created": "",
+      "last_modified": "",
+      "status": "draft",
+      "type": "note",
+      "tags": []
+    }
+  },
+  "analysis": {
+    "most_linked": [
+      {
+        "path": "activeContext.md",
+        "count": 5
+      },
+      {
+        "path": "progress.md",
+        "count": 3
+      },
+      {
+        "path": "Memory Entity.md",
+        "count": 2
+      },
+      {
+        "path": "systemPatterns.md",
+        "count": 2
+      },
+      {
+        "path": "projectbrief.md",
+        "count": 2
+      },
+      {
+        "path": "mcp-integration.md",
+        "count": 2
+      },
+      {
+        "path": "productContext.md",
+        "count": 2
+      },
+      {
+        "path": "techContext.md",
+        "count": 2
+      },
+      {
+        "path": "codebase-review.md",
+        "count": 1
+      },
+      {
+        "path": "mcp-document-insights.md",
+        "count": 1
+      }
+    ],
+    "orphaned_notes": [
+      "backlinks-analysis.md",
+      "01-Domain\\Domain-Model-Graph.md",
+      "01-Domain-Layer\\Models.md",
+      "03-Implementation\\CLI\\CLI-Architecture.md",
+      "02-Architecture\\Layers\\Domain-Layer.md",
+      "02-Architecture\\MCP\\mcp-client-guide.md",
+      "02-Architecture\\MCP\\mcp-implementation.md",
+      "02-Architecture\\MCP\\mcp-servers.md",
+      "01-Domain\\Entities\\Memory.md",
+      "00-Core\\Guides\\daily-workflow.md",
+      "00-Core\\Guides\\folder-structure.md",
+      "00-Core\\Guides\\recommended-plugins.md",
+      "00-Core\\Guides\\tags-and-metadata.md",
+      "00-Core\\Guides\\using-graph-view.md",
+      "00-Core\\MCP\\mcp-overview.md",
+      "00-Core\\MOCS\\Architecture-MOC.md",
+      "00-Core\\MOCS\\index.md",
+      "00-Core\\Templates\\component.md",
+      "00-Core\\Templates\\design.md",
+      "00-Core\\Templates\\documentation.md",
+      "00-Core\\Templates\\feature.md",
+      "00-Core\\Templates\\note.md"
+    ],
+    "potential_connections": [
+      {
+        "source": "activeContext.md",
+        "target": "progress.md",
+        "confidence": 0.6
+      },
+      {
+        "source": "activeContext.md",
+        "target": "mcp-integration.md",
+        "confidence": 0.4
+      },
+      {
+        "source": "activeContext.md",
+        "target": "productContext.md",
+        "confidence": 0.4
+      },
+      {
+        "source": "activeContext.md",
+        "target": "projectbrief.md",
+        "confidence": 0.4
+      },
+      {
+        "source": "mcp-integration.md",
+        "target": "progress.md",
+        "confidence": 0.4
+      },
+      {
+        "source": "productContext.md",
+        "target": "progress.md",
+        "confidence": 0.4
+      },
+      {
+        "source": "productContext.md",
+        "target": "projectbrief.md",
+        "confidence": 0.4
+      },
+      {
+        "source": "progress.md",
+        "target": "projectbrief.md",
+        "confidence": 0.4
+      }
+    ]
+  }
+}
