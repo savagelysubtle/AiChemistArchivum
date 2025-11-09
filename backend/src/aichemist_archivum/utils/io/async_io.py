@@ -264,12 +264,13 @@ class AsyncFileIO:
             return
 
         try:
+            semaphore: asyncio.Semaphore | None = None
             if buffer_limit:
                 semaphore = asyncio.Semaphore(buffer_limit)
 
             async with aiofiles.open(file_path, "rb") as f:
                 while True:
-                    if buffer_limit:
+                    if semaphore:
                         await semaphore.acquire()
 
                     chunk = await f.read(chunk_size)
@@ -278,7 +279,7 @@ class AsyncFileIO:
 
                     yield chunk
 
-                    if buffer_limit:
+                    if semaphore:
                         semaphore.release()
         except Exception as e:
             logger.error(f"Error reading {file_path} in chunks: {e}")
@@ -425,17 +426,18 @@ class AsyncFileIO:
             # Create directory if it doesn't exist
             os.makedirs(file_path.parent, exist_ok=True)
 
+            semaphore: asyncio.Semaphore | None = None
             if buffer_limit:
                 semaphore = asyncio.Semaphore(buffer_limit)
 
             async with aiofiles.open(file_path, "ab") as f:
                 async for chunk in content_iterator:
-                    if buffer_limit:
+                    if semaphore:
                         await semaphore.acquire()
 
                     await f.write(chunk)
 
-                    if buffer_limit:
+                    if semaphore:
                         semaphore.release()
             return True
         except Exception as e:

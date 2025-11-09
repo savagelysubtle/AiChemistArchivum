@@ -36,9 +36,10 @@ async def summarize_code(directory: Path):
     directory = directory.resolve()  # Ensure absolute path
 
     # Get Python files, skipping ignored ones using SafeFileHandler
+    safe_handler = SafeFileHandler()
     python_files = []
     for path in directory.glob("**/*.py"):
-        if SafeFileHandler.should_ignore(path):
+        if safe_handler.should_ignore(path):
             continue  # Skip ignored files and directories
         python_files.append(path)
 

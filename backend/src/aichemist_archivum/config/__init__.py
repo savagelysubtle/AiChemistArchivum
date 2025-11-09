@@ -50,7 +50,9 @@ from .settings import get_settings as get_static_settings
 _codex_config = get_codex_config()
 
 # 5. Setup Logging using the loaded configuration
-_log_config_dict = _codex_config.get("logging")
+from typing import Any
+
+_log_config_dict: dict[str, Any] | None = _codex_config.get("logging")
 if not isinstance(_log_config_dict, dict):
     # This is expected before 'config init' is run - use debug level
     _logging.getLogger(__name__).debug(

@@ -111,23 +111,23 @@ class FileReader:
                 raise FileNotFoundError(f"File not found: {file_path}")
 
             # Get MIME type and size concurrently
-            tasks = {
-                "mime": asyncio.create_task(self.get_mime_type(file_path)),
-                "stat": asyncio.create_task(self.async_file_io.stat(file_path)),
-            }
-            results = await asyncio.gather(*tasks.values(), return_exceptions=True)
+            tasks = [
+                asyncio.create_task(self.get_mime_type(file_path)),
+                asyncio.create_task(self.async_file_io.stat(file_path)),
+            ]
+            results = await asyncio.gather(*tasks, return_exceptions=True)
 
-            mime_result = results[0]
-            stat_result = results[1]
+            mime_result = results[0] if len(results) > 0 else Exception("No MIME result")
+            stat_result = results[1] if len(results) > 1 else Exception("No stat result")
 
             if isinstance(mime_result, Exception):
                 logger.warning(
                     f"Could not get MIME type for {file_path}: {mime_result}"
                 )
-                mime_type = "application/octet-stream"  # Fallback
+                mime_type: str | None = "application/octet-stream"  # Fallback
                 error_msg = f"MIME detection failed: {mime_result!s}"
             else:
-                mime_type = mime_result
+                mime_type = str(mime_result) if mime_result else None
 
             if isinstance(stat_result, Exception):
                 logger.error(f"Could not get file stats for {file_path}: {stat_result}")
@@ -186,9 +186,12 @@ class FileReader:
             logger.exception(error_msg)  # Log with stack trace
 
         # Return error metadata if any exception occurred above
+        final_mime_type: str | None = (
+            "error" if mime_type == "unknown" else mime_type
+        )
         return FileMetadata(
             path=file_path,
-            mime_type=mime_type if mime_type != "unknown" else "error",
+            mime_type=final_mime_type,
             size=size,
             extension=file_path.suffix.lower(),
             error=error_msg,

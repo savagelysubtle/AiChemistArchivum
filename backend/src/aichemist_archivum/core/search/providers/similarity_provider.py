@@ -255,9 +255,8 @@ class SimilarityProvider:
                 # Process files to get their embeddings
                 results = await processor.process_batch(
                     items=batch,
-                    operation=self._process_file,
+                    processor=self._process_file,
                     batch_size=10,
-                    timeout=60,
                 )
 
                 # Filter out None results and collect embeddings and paths
@@ -285,7 +284,7 @@ class SimilarityProvider:
                 n_clusters=None,
                 distance_threshold=1
                 - threshold,  # Convert similarity threshold to distance
-                affinity="precomputed",
+                metric="precomputed",
                 linkage="average",
             )
 

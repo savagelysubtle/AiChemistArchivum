@@ -128,8 +128,11 @@ async def _search_content_async(
         elif method == "regex":
             with console.status("🔄 Searching with regex..."):
                 result_paths = await search_engine.regex_search_async(
-                    query, max_results=max_results
+                    pattern=query
                 )
+                # Limit results if max_results is specified
+                if max_results:
+                    result_paths = result_paths[:max_results]
                 results = [
                     {
                         "file": path,

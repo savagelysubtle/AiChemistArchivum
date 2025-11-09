@@ -16,10 +16,13 @@ from pathlib import Path
 from typing import Any
 
 from aichemist_archivum.config.settings import determine_project_root
+from aichemist_archivum.services.rollback_engine import (
+    RollbackSpec,
+    RollbackStrategy,
+    rollback_engine,
+)
+from aichemist_archivum.services.versioning_service import version_manager
 from aichemist_archivum.utils.io.async_io import AsyncFileIO
-
-from ..version_manager import version_manager
-from .engine import RollbackSpec, RollbackStrategy, rollback_engine
 
 logger = logging.getLogger(__name__)
 
@@ -142,6 +145,7 @@ class TransactionManager:
             A tuple: (True, None) on successful preparation, or
             (False, error_message) if validation fails or an error occurs.
         """
+        metadata = None
         try:
             # Get the transaction metadata
             metadata = await self._get_transaction(transaction_id)
@@ -213,6 +217,7 @@ class TransactionManager:
             A tuple: (True, None) on successful commit, or
             (False, error_message) if the commit fails or an error occurs.
         """
+        metadata = None
         try:
             # Get the transaction metadata
             metadata = await self._get_transaction(transaction_id)

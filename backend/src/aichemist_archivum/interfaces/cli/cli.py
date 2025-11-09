@@ -173,11 +173,12 @@ def validate_path_exists(path: Path) -> Path:
 
 def format_file_size(size_bytes: int) -> str:
     """Format file size in human readable format."""
+    size: float = float(size_bytes)
     for unit in ["B", "KB", "MB", "GB", "TB"]:
-        if size_bytes < 1024.0:
-            return f"{size_bytes:.1f} {unit}"
-        size_bytes /= 1024.0
-    return f"{size_bytes:.1f} PB"
+        if size < 1024.0:
+            return f"{size:.1f} {unit}"
+        size /= 1024.0
+    return f"{size:.1f} PB"
 
 
 def display_results_table(results: list, title: str = "Results") -> None:

@@ -98,6 +98,10 @@ async def _create_version_async(
             tags=tags,
         )
 
+        if metadata is None:
+            console.print("❌ [red]Failed to create version[/red]")
+            raise typer.Exit(1)
+
         console.print("✅ [green]Version created successfully[/green]")
 
         # Display version info
@@ -111,8 +115,8 @@ async def _create_version_async(
         info_table.add_row("Created", str(metadata.timestamp))
         if metadata.author:
             info_table.add_row("Author", metadata.author)
-        if metadata.annotation:
-            info_table.add_row("Message", metadata.annotation)
+        if metadata.change_description:
+            info_table.add_row("Message", metadata.change_description)
         if metadata.tags:
             info_table.add_row("Tags", ", ".join(metadata.tags))
 

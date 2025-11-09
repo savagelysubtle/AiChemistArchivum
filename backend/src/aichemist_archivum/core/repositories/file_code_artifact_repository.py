@@ -32,7 +32,6 @@ class FileCodeArtifactRepository(CodeArtifactRepository):
             RepositoryError: If the storage directory cannot be created or accessed
         """
         self.storage_dir = storage_dir
-        self.async_io = AsyncFileIO(storage_dir)
 
         # In-memory cache to speed up lookups
         self._cache: dict[str, CodeArtifact] = {}
@@ -46,7 +45,7 @@ class FileCodeArtifactRepository(CodeArtifactRepository):
             RepositoryError: If the directory cannot be created or accessed
         """
         try:
-            await self.async_io.makedirs(self.storage_dir, exist_ok=True)
+            self.storage_dir.mkdir(parents=True, exist_ok=True)
         except Exception as e:
             raise RepositoryError(
                 message="Failed to create storage directory",
@@ -137,7 +136,7 @@ class FileCodeArtifactRepository(CodeArtifactRepository):
 
             # Save to file
             artifact_path = self._get_artifact_path(artifact.id)
-            await self.async_io.write_json(artifact_path, data)
+            await AsyncFileIO.write_json(artifact_path, data)
 
             # Update cache and indexes
             artifact_id_str = str(artifact.id)
@@ -181,10 +180,10 @@ class FileCodeArtifactRepository(CodeArtifactRepository):
         # Load from file
         artifact_path = self._get_artifact_path(artifact_id)
         try:
-            if not await self.async_io.exists(artifact_path):
+            if not await AsyncFileIO.exists(artifact_path):
                 return None
 
-            data = await self.async_io.read_json(artifact_path)
+            data = await AsyncFileIO.read_json(artifact_path)
             artifact = self._deserialize_artifact(data)
 
             # Update cache and indexes
@@ -252,7 +251,7 @@ class FileCodeArtifactRepository(CodeArtifactRepository):
             A list of artifact ID strings
         """
         try:
-            files = await self.async_io.glob("*.json")
+            files = list(self.storage_dir.glob("*.json"))
             return [f.stem for f in files]
         except Exception as e:
             raise RepositoryError(
@@ -306,7 +305,7 @@ class FileCodeArtifactRepository(CodeArtifactRepository):
         """
         try:
             # List all JSON files in the directory
-            json_files = await self.async_io.glob("*.json")
+            json_files = list(self.storage_dir.glob("*.json"))
 
             results = []
             for file_path in json_files:
@@ -403,8 +402,8 @@ class FileCodeArtifactRepository(CodeArtifactRepository):
 
             # Delete the file
             artifact_path = self._get_artifact_path(artifact_id)
-            if await self.async_io.exists(artifact_path):
-                await self.async_io.remove(artifact_path)
+            if await AsyncFileIO.exists(artifact_path):
+                artifact_path.unlink()
 
             return True
         except Exception as e:

@@ -73,7 +73,10 @@ class SearchEngine:
         )
         self._initialize_index()
         self._initialize_database_sync()
-        self.async_db = AsyncSQL(db_path)  # Async SQL utility
+        # Ensure db_path is not None before passing to AsyncSQL
+        if self.db_path is None:
+            raise ValueError("db_path cannot be None")
+        self.async_db = AsyncSQL(self.db_path)  # Async SQL utility
         self.cache_manager = cache_manager
 
         # Initialize search providers
@@ -107,7 +110,7 @@ class SearchEngine:
             model_wrapper.embedding_model = self.embedding_model  # type: ignore
 
             self.similarity_provider = SimilarityProvider(
-                embedding_model=cast(TextEmbeddingModel, model_wrapper),
+                embedding_model=model_wrapper,
                 vector_index=self.semantic_index,
                 path_mapping=self.semantic_mapping,
                 cache_manager=cache_manager,
@@ -161,7 +164,7 @@ class SearchEngine:
 
             # Use AsyncFileIO to read file content if preview is empty.
             preview_content = file_metadata.preview
-            if not preview_content and file_metadata.mime_type.startswith("text/"):
+            if not preview_content and file_metadata.mime_type and file_metadata.mime_type.startswith("text/"):
                 preview_content = await AsyncFileIO.read_text(file_metadata.path)
                 if preview_content.startswith("# "):
                     logger.warning(
@@ -234,7 +237,7 @@ class SearchEngine:
             await self.async_db.execute(sql, params, commit=True)
 
             # Semantic indexing: compute embedding and add to FAISS index.
-            if file_metadata.mime_type.startswith("text") and preview_content:
+            if file_metadata.mime_type and file_metadata.mime_type.startswith("text") and preview_content:
                 embedding = await asyncio.to_thread(
                     self.embedding_model.encode, preview_content
                 )
@@ -567,7 +570,7 @@ class SearchEngine:
         converted_paths: list[str | Path] | None = None
         if file_paths is not None:
             # Convert to List[Union[str, Path]] since the provider accepts either type
-            converted_paths = list(file_paths)
+            converted_paths = [str(p) if isinstance(p, Path) else p for p in file_paths]
 
         try:
             # Use the similarity provider to find file groups

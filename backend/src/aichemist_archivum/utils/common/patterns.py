@@ -11,8 +11,13 @@ class PatternMatcher:
 
     def __init__(self) -> None:
         # Safely get ignore patterns with a default empty list
-        ignore_patterns = config.get("ignore_patterns") if config else []
-        self.ignore_patterns = set(ignore_patterns) if ignore_patterns else set()
+        ignore_patterns_raw = config.get("ignore_patterns") if config else []
+        # Ensure we have a list of strings
+        if ignore_patterns_raw and isinstance(ignore_patterns_raw, list):
+            ignore_patterns: list[str] = [str(p) for p in ignore_patterns_raw]
+            self.ignore_patterns = set(ignore_patterns)
+        else:
+            self.ignore_patterns: set[str] = set()
 
     def add_patterns(self, patterns: set) -> None:
         """Allows dynamically adding more ignore patterns."""

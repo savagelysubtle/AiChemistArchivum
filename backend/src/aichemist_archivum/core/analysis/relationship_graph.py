@@ -13,19 +13,28 @@ from pathlib import Path
 import networkx as nx
 
 # Optional domain imports
-try:
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
     from aichemist_archivum.domain.relationships.relationship_type import (
         RelationshipType,
     )
     from aichemist_archivum.domain.repositories.interfaces.relationship_repository import (
         RelationshipRepositoryInterface,
     )
-
-    DOMAIN_AVAILABLE = True
-except ImportError:
-    DOMAIN_AVAILABLE = False
-    RelationshipType = None  # type: ignore
-    RelationshipRepositoryInterface = object  # type: ignore
+else:
+    try:
+        from aichemist_archivum.domain.relationships.relationship_type import (
+            RelationshipType,
+        )
+        from aichemist_archivum.domain.repositories.interfaces.relationship_repository import (
+            RelationshipRepositoryInterface,
+        )
+        DOMAIN_AVAILABLE = True
+    except ImportError:
+        DOMAIN_AVAILABLE = False
+        RelationshipType = None  # type: ignore
+        RelationshipRepositoryInterface = object  # type: ignore
 
 logger = logging.getLogger(__name__)
 
@@ -59,7 +68,7 @@ class RelationshipGraph:
 
     async def build_graph(
         self,
-        rel_types: list[RelationshipType] | None = None,
+        rel_types: list["RelationshipType"] | None = None,
         min_strength: float = 0.0,
     ) -> nx.DiGraph:
         """
@@ -115,7 +124,7 @@ class RelationshipGraph:
 
     async def get_graph(
         self,
-        rel_types: list[RelationshipType] | None = None,
+        rel_types: list["RelationshipType"] | None = None,
         min_strength: float = 0.0,
         force_rebuild: bool = False,
     ) -> nx.DiGraph:
@@ -144,9 +153,9 @@ class RelationshipGraph:
         source_path: Path,
         target_path: Path,
         max_length: int = 5,
-        rel_types: list[RelationshipType] | None = None,
+        rel_types: list["RelationshipType"] | None = None,
         min_strength: float = 0.0,
-    ) -> list[list[tuple[Path, RelationshipType]]]:
+    ) -> list[list[tuple[Path, "RelationshipType"]]]:
         """Find all paths between two files up to a maximum length."""
         graph = await self.get_graph(rel_types, min_strength)
         source_str = str(source_path)
@@ -176,7 +185,7 @@ class RelationshipGraph:
 
     async def calculate_centrality(
         self,
-        rel_types: list[RelationshipType] | None = None,
+        rel_types: list["RelationshipType"] | None = None,
         min_strength: float = 0.0,
         top_n: int = 10,
     ) -> list[tuple[Path, float]]:
@@ -199,7 +208,7 @@ class RelationshipGraph:
     async def export_graphviz(
         self,
         output_path: Path | None = None,
-        rel_types: list[RelationshipType] | None = None,
+        rel_types: list["RelationshipType"] | None = None,
         min_strength: float = 0.0,
         max_nodes: int | None = None,
     ) -> None:
@@ -259,7 +268,7 @@ class RelationshipGraph:
     async def export_json(
         self,
         output_path: Path | None = None,
-        rel_types: list[RelationshipType] | None = None,
+        rel_types: list["RelationshipType"] | None = None,
         min_strength: float = 0.0,
         max_nodes: int | None = None,
     ) -> None:
@@ -316,9 +325,11 @@ class RelationshipGraph:
                 "source": u,
                 "target": v,
                 "id": data.get("id"),
-                "type": data.get(
-                    "type", RelationshipType.CUSTOM
-                ).name,  # Use name for JSON
+                "type": (
+                    data.get("type", RelationshipType.CUSTOM).name  # type: ignore
+                    if RelationshipType and hasattr(RelationshipType, "CUSTOM")
+                    else data.get("type", "CUSTOM")
+                ),
                 "strength": data.get("strength", 1.0),
                 "bidirectional": data.get("bidirectional", False),
             }

@@ -38,6 +38,7 @@ dependencies = [
   # --- Web & API ---
   "aiohttp>=3.8.5",                 # Async HTTP client/server
   "grpcio-health-checking>=1.60.0", # gRPC health checking
+  "mcp>=1.0.0",                     # Model Context Protocol for AI agent integration
 
   # --- CLI ---
   "rich>=13.6.0", # Rich text and formatting in terminal
@@ -286,13 +287,13 @@ skip-magic-trailing-comma  = false
 python-version = "3.13"
 python-platform = "win32"
 # Configure root paths for non-standard layout
-root = ["backend/src", "tests"]
+root = ["backend/src", "backend/tests"]
 
 [tool.ty.src]
 # Include patterns for source files
 include = [
     "backend/src/**",
-    "tests/**",
+    "backend/tests/**",
 ]
 # Exclude common patterns
 exclude = [
@@ -317,7 +318,7 @@ error-on-warning = false
 
 # Example override for tests
 [[tool.ty.overrides]]
-include = ["tests/**"]
+include = ["backend/tests/**"]
 [tool.ty.overrides.rules]
 possibly-unresolved-reference = "warn"
 

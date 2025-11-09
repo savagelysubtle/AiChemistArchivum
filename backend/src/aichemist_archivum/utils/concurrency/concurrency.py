@@ -306,20 +306,22 @@ class TaskManager:
             tasks.append(asyncio.create_task(_wrapper(coro_item)))
 
         if tasks:  # Ensure gather is not called with an empty list
-            results_with_exceptions = await asyncio.gather(
+            results_with_exceptions: tuple[Any, ...] = await asyncio.gather(
                 *tasks, return_exceptions=True
             )
 
-        # Filter out exceptions and return results
-        # This assumes that if an exception occurs, we don't want to include its placeholder
-        # in the final list, and the order of successful results is maintained.
-        final_results: list[T] = []
-        for result_item in results_with_exceptions:
-            if not isinstance(result_item, BaseException):
-                final_results.append(result_item)
-            else:
-                # Optionally log the exception here
-                logger.error(
-                    f"Task in batch failed: {result_item}", exc_info=result_item
-                )
+            # Filter out exceptions and return results
+            # This assumes that if an exception occurs, we don't want to include its placeholder
+            # in the final list, and the order of successful results is maintained.
+            final_results: list[T] = []
+            for result_item in results_with_exceptions:
+                if not isinstance(result_item, BaseException):
+                    final_results.append(result_item)
+                else:
+                    # Optionally log the exception here
+                    logger.error(
+                        f"Task in batch failed: {result_item}", exc_info=result_item
+                    )
+        else:
+            final_results: list[T] = []
         return final_results
